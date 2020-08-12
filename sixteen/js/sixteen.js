@@ -24,3 +24,5 @@ const resetBtnBorder = () => {
 const setBtnBorder = (btn) => {
   btn.className = "nav-buttons-clicked";
 };
+
+// Carousel

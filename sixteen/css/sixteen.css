@@ -15,7 +15,7 @@ html {
   display: flex;
   width: 1000px;
   height: 588px;
-  background: #000;
+  background: #212121;
   margin: 100px auto;
 }
 
@@ -36,7 +36,7 @@ html {
   width: 180px;
   height: 196px;
   background: #424242;
-  border-right: 4px solid #0da9ff;
+  border-right: 6px solid #0da9ff;
 }
 
 .nav-buttons-clicked .aim-icon {
@@ -57,13 +57,13 @@ html {
   justify-content: space-around;
   width: 700px;
   height: 588px;
-  background: lightgray;
+  background: #000;
   margin: auto;
 }
 
 .specialty-container {
   width: 700px;
-  height: 200px;
+  height: 50px;
   background: lightyellow;
 }
 
@@ -71,6 +71,12 @@ html {
   width: 700px;
   height: 200px;
   background: lightpink;
+}
+
+.lightbulb-icon-div {
+  width: 700px;
+  height: 20px;
+  background: lightseagreen;
 }
 
 .home-icon {
@@ -108,3 +114,5 @@ html {
   opacity: 1;
   background-size: 90px;
 }
+
+/* Carousel */
