@@ -29,13 +29,13 @@ html {
 .nav-buttons {
   width: 180px;
   height: 196px;
-  background: #1d1d1d;
+  background: #424242;
 }
 
 .nav-buttons-clicked {
   width: 180px;
   height: 196px;
-  background: #1d1d1d;
+  background: #424242;
   border-right: 4px solid #0da9ff;
 }
 
