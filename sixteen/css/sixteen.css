@@ -125,11 +125,12 @@ html {
 .lightbulb-icon-div {
   display: flex;
   width: 700px;
-  margin-top: 55px;
+  margin-top: 60px;
   margin-left: 30px;
 }
 
 .home-icon {
+  cursor: pointer;
   width: 120px;
   height: 120px;
   margin-top: 50px;
@@ -141,6 +142,7 @@ html {
 }
 
 .aim-icon {
+  cursor: pointer;
   width: 120px;
   height: 120px;
   margin: 60px auto;
@@ -155,6 +157,7 @@ html {
 }
 
 .gear-icon {
+  cursor: pointer;
   width: 120px;
   height: 120px;
   margin-top: 50px;
@@ -239,6 +242,15 @@ html {
 /* Carousel */
 .specialty-slides {
   display: none;
+  min-width: 500px;
+  background-color: #000;
+  border: 4px solid #424242;
+}
+
+.specialty-div {
+  min-width: 500px;
+  background-color: #000;
+  border: 4px solid #424242;
 }
 
 .specialty-slides p {
@@ -253,6 +265,10 @@ html {
 .dot-container {
   text-align: center;
   padding: 20px;
+}
+
+#default-dot {
+  background-color: #0da9ff;
 }
 
 .dot {
