@@ -57,26 +57,75 @@ html {
   justify-content: space-around;
   width: 700px;
   height: 588px;
-  background: #000;
   margin: auto;
 }
 
 .specialty-container {
+  display: flex;
   width: 700px;
-  height: 50px;
-  background: lightyellow;
+  margin: 50px auto;
+}
+
+#right-arrow {
+  width: 100px;
+  height: 80px;
+  background: #424242;
+  margin: auto;
+}
+
+.right-arrow-img {
+  width: 200px;
+  height: 200px;
+  margin: 5px auto;
+  margin-left: 40px;
+  background: transparent url("/sixteen/img/right-arrow.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 35px;
+}
+
+#left-arrow {
+  width: 100px;
+  height: 80px;
+  background: #424242;
+  margin: auto;
+}
+
+.left-arrow-img {
+  width: 200px;
+  height: 200px;
+  margin: 5px auto;
+  margin-left: 30px;
+  background: transparent url("/sixteen/img/left-arrow.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 35px;
+}
+
+.specialty-div {
+  background: #000;
+  width: 100%;
+}
+
+.specialty-div h3 {
+  font-family: roboto;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
 }
 
 .controls-container {
+  display: flex;
+  justify-content: space-around;
   width: 700px;
-  height: 200px;
-  background: lightpink;
+  margin-top: 30px;
 }
 
 .lightbulb-icon-div {
+  display: flex;
   width: 700px;
-  height: 20px;
-  background: lightseagreen;
 }
 
 .home-icon {
@@ -115,4 +164,73 @@ html {
   background-size: 90px;
 }
 
-/* Carousel */
+.wb-btn-div {
+  width: 160px;
+  height: 120px;
+  background: #424242;
+}
+
+.wb-btn-div h3 {
+  font-family: roboto;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 25px;
+  color: #fff;
+}
+
+.camera-btn-div {
+  width: 160px;
+  height: 120px;
+  background: #424242;
+}
+
+.camera-btn-img {
+  width: 120px;
+  height: 120px;
+  margin-top: 25px;
+  margin-left: 40px;
+  background: transparent url("/sixteen/img/camera-icon.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 80px;
+}
+
+.video-btn-div {
+  width: 160px;
+  height: 120px;
+  background: #424242;
+}
+
+.video-btn-img {
+  width: 120px;
+  height: 120px;
+  margin-top: 30px;
+  margin-left: 35px;
+  background: transparent url("/sixteen/img/video-icon.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 95px;
+}
+
+.lightbulb-icon-cicle {
+  width: 75px;
+  height: 75px;
+  background: #37474f;
+  border-radius: 50%;
+  border: 2px solid #0da9ff;
+  opacity: 0.6;
+  margin-left: 90%;
+}
+
+.lightbulb-icon-img {
+  width: 75px;
+  height: 75px;
+  margin-top: 15px;
+  margin-left: 15px;
+
+  background: transparent url("/sixteen/img/lightbulb-icon.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 40px;
+}

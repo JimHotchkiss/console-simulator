@@ -1,5 +1,6 @@
 window.addEventListener("load", (event) => {
   addButtonListener();
+  addArrowListener();
 });
 
 const addButtonListener = () => {
@@ -23,6 +24,15 @@ const resetBtnBorder = () => {
 };
 const setBtnBorder = (btn) => {
   btn.className = "nav-buttons-clicked";
+};
+
+const addArrowListener = () => {
+  const arrowBtns = document.getElementsByClassName("arrow-div");
+  for (let item of arrowBtns) {
+    item.addEventListener("click", () => {
+      console.log(event.currentTarget);
+    });
+  }
 };
 
 // Carousel
