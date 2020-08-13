@@ -54,19 +54,17 @@ html {
 .controls-specialty-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   width: 700px;
-  height: 588px;
-  margin: auto;
+  margin: 75px auto;
 }
 
 .specialty-container {
   display: flex;
   width: 700px;
-  margin: 50px auto;
 }
 
 #right-arrow {
+  cursor: pointer;
   width: 100px;
   height: 80px;
   background: #424242;
@@ -75,7 +73,7 @@ html {
 
 .right-arrow-img {
   width: 200px;
-  height: 200px;
+  height: 100px;
   margin: 5px auto;
   margin-left: 40px;
   background: transparent url("/sixteen/img/right-arrow.png") 0% 0% no-repeat
@@ -85,6 +83,7 @@ html {
 }
 
 #left-arrow {
+  cursor: pointer;
   width: 100px;
   height: 80px;
   background: #424242;
@@ -93,7 +92,7 @@ html {
 
 .left-arrow-img {
   width: 200px;
-  height: 200px;
+  height: 100px;
   margin: 5px auto;
   margin-left: 30px;
   background: transparent url("/sixteen/img/left-arrow.png") 0% 0% no-repeat
@@ -120,12 +119,14 @@ html {
   display: flex;
   justify-content: space-around;
   width: 700px;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .lightbulb-icon-div {
   display: flex;
   width: 700px;
+  margin-top: 55px;
+  margin-left: 30px;
 }
 
 .home-icon {
@@ -233,4 +234,40 @@ html {
     padding-box;
   opacity: 1;
   background-size: 40px;
+}
+
+/* Carousel */
+.specialty-slides {
+  display: none;
+}
+
+.specialty-slides p {
+  font-family: roboto;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #37474f;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #0da9ff;
 }

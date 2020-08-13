@@ -7,6 +7,7 @@ const addButtonListener = () => {
   const navBtns = document.getElementsByClassName("nav-buttons");
   for (let item of navBtns) {
     item.addEventListener("click", () => {
+      changeHomeScreen();
       resetBtnBorder();
       const btn = event.currentTarget;
       setBtnBorder(btn);
@@ -33,6 +34,11 @@ const addArrowListener = () => {
       console.log(event.currentTarget);
     });
   }
+};
+
+const changeHomeScreen = () => {
+  const homeScreen = document.getElementById("home-screen");
+  homeScreen.style.display = "none";
 };
 
 // Carousel
