@@ -10,12 +10,16 @@ const addButtonListener = () => {
     item.addEventListener("click", () => {
       if (item.id === "aim-nav-button") {
         aimContainer.id = "aim-container-active";
+        changeHomeScreen();
       } else if (item.id === "home-nav-button") {
         aimContainer.id = "aim-container";
         const homeScreen = document.getElementById("home-screen");
-        homeScreen.style.display = "block";
+        console.log(homeScreen);
+        homeScreen.style.display = "";
+      } else {
+        changeHomeScreen();
       }
-      changeHomeScreen(item);
+
       resetBtnBorder();
       const btn = event.currentTarget;
       setBtnBorder(btn);
