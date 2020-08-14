@@ -5,9 +5,17 @@ window.addEventListener("load", (event) => {
 
 const addButtonListener = () => {
   const navBtns = document.getElementsByClassName("nav-buttons");
+  const aimContainer = document.getElementById("aim-container");
   for (let item of navBtns) {
     item.addEventListener("click", () => {
-      changeHomeScreen();
+      if (item.id === "aim-nav-button") {
+        aimContainer.id = "aim-container-active";
+      } else if (item.id === "home-nav-button") {
+        aimContainer.id = "aim-container";
+        const homeScreen = document.getElementById("home-screen");
+        homeScreen.style.display = "block";
+      }
+      changeHomeScreen(item);
       resetBtnBorder();
       const btn = event.currentTarget;
       setBtnBorder(btn);

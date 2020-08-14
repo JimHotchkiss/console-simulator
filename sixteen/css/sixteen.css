@@ -43,7 +43,7 @@ html {
   margin-left: 30px;
 }
 
-#top-nav-button {
+#home-nav-button {
   margin-bottom: 8px;
 }
 
@@ -169,6 +169,7 @@ html {
 }
 
 .wb-btn-div {
+  cursor: pointer;
   width: 160px;
   height: 120px;
   background: #424242;
@@ -184,6 +185,7 @@ html {
 }
 
 .camera-btn-div {
+  cursor: pointer;
   width: 160px;
   height: 120px;
   background: #424242;
@@ -201,6 +203,7 @@ html {
 }
 
 .video-btn-div {
+  cursor: pointer;
   width: 160px;
   height: 120px;
   background: #424242;
@@ -280,10 +283,61 @@ html {
   border: 1px solid #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease;
 }
 
 .active,
 .dot:hover {
   background-color: #0da9ff;
+}
+
+/* AIM Container */
+#aim-container {
+  display: none;
+}
+
+#aim-container-active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #212121;
+}
+
+.aim-title-container {
+  width: 99%;
+  height: 75px;
+  margin: 0 auto;
+  background: #424242;
+  margin-left: 8px;
+}
+
+.aim-title-container h3 {
+  font-family: roboto;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
+}
+
+.aim-modalities-container {
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  background: lightslategray;
+}
+
+.aim-adjustments-container {
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  background: lightskyblue;
+}
+
+.aim-footer-container {
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  background: lightsteelblue;
 }
