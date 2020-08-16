@@ -1,7 +1,44 @@
 window.addEventListener("load", (event) => {
   addButtonListener();
   addArrowListener();
+  document.getElementById("home-nav-button").className = "nav-buttons-clicked";
+  openModalListener();
+  closeModalListener();
 });
+
+// Modal
+// const spyToggleBtn = document.querySelectorAll(`[data-modal-target]`);
+// const spyCloseToggleBtn = document.querySelectorAll("[data-modal-close]");
+
+const openModalListener = () => {
+  const spyToggleBtn = document.getElementById("spy-toggle-div");
+  spyToggleBtn.addEventListener("click", () => {
+    const modal = document.getElementById("modal");
+    openModal(modal);
+  });
+};
+
+const closeModalListener = () => {
+  const modalCloseBtn = document.getElementById("modal-close");
+  modalCloseBtn.addEventListener("click", () => {
+    const modal = document.getElementById("modal");
+    closeModal(modal);
+  });
+};
+
+const openModal = (modal) => {
+  const overLay = document.getElementById("modal-overlay");
+  if (modal == null) return;
+  modal.classList.add("active");
+  overLay.classList.add("active");
+};
+
+const closeModal = (modal) => {
+  const overLay = document.getElementById("modal-overlay");
+  if (modal == null) return;
+  modal.classList.remove("active");
+  overLay.classList.remove("active");
+};
 
 const addButtonListener = () => {
   const navBtns = document.getElementsByClassName("nav-buttons");
@@ -14,7 +51,6 @@ const addButtonListener = () => {
       } else if (item.id === "home-nav-button") {
         aimContainer.id = "aim-container";
         const homeScreen = document.getElementById("home-screen");
-        console.log(homeScreen);
         homeScreen.style.display = "";
       } else {
         changeHomeScreen();
@@ -75,7 +111,10 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("specialty-slides");
   let dots = document.getElementsByClassName("dot");
   const defaultSpecialty = document.getElementById("specialty-default");
-  defaultSpecialty.style.display = "none";
+  if (defaultSpecialty !== null) {
+    defaultSpecialty.style.display = "none";
+  }
+
   const defaultDot = document.getElementById("default-dot");
   if (defaultDot !== null) {
     defaultDot.id = "";
@@ -93,10 +132,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  console.log(slides[slideIndex - 1] !== "undefined");
-  if (slides[slideIndex - 1] !== "undefined") {
-    slides[slideIndex - 1].style.display = "block";
-  }
+  slides[slideIndex - 1].style.display = "block";
 
   dots[slideIndex - 1].className += " active";
 }

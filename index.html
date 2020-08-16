@@ -13,6 +13,28 @@
     <title>Sixteen Simulator</title>
   </head>
   <body>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="modal-title">SPY Mode Requirements</div>
+        <button id="modal-close" class="close-modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere saepe
+        impedit pariatur magni aliquid quibusdam nihil corporis sit. Molestiae
+        velit dolore fuga aut provident, eveniet fugiat in laudantium quaerat
+        necessitatibus! Aut, expedita? Eveniet esse quas molestiae unde, neque
+        nesciunt veniam vero exercitationem. Recusandae facere ducimus eos
+        explicabo laboriosam, qui ab nesciunt sunt. Obcaecati eius tenetur
+        voluptatibus assumenda quia quod numquam. Labore, assumenda voluptatum.
+        Hic corrupti aspernatur vitae sunt ab dicta exercitationem modi ea
+        voluptatibus. Inventore, omnis repellat corrupti natus iusto sunt
+        molestiae repudiandae enim minima aut recusandae voluptas architecto
+        eaque!
+      </div>
+    </div>
+    <div id="modal-overlay"></div>
+    <!-- End Modal -->
     <div class="display-screen">
       <div id="navigation-container">
         <div id="home-nav-button" class="nav-buttons">
@@ -148,7 +170,11 @@
           <h3 class="spy-toggle-title-text">SPY</h3>
         </div>
         <div class="aim-footer-container">
-          <div class="spy-toggle-div">
+          <div
+            data-modal-target="#modal"
+            id="spy-toggle-div"
+            class="spy-toggle-div"
+          >
             <div class="spy-toggle-btn-on">
               <h3 class="spy-toggle-text">Off</h3>
             </div>
