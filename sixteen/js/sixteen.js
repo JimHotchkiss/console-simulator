@@ -71,21 +71,25 @@ const addButtonListener = () => {
   const navBtns = document.getElementsByClassName("nav-buttons");
   const aimContainer = document.getElementById("aim-container");
   const settingsContainer = document.getElementById("settings-container");
+  const settingsAutoLight = document.getElementById("settings-autolight");
   for (let item of navBtns) {
     item.addEventListener("click", () => {
       if (item.id === "aim-nav-button") {
         hideHomeScreen();
-        settingsContainer.classList.remove("active");
+        settingsContainer.classList.remove("show");
+        settingsAutoLight.classList.remove("show");
         aimContainer.classList.add("active");
       } else if (item.id === "home-nav-button") {
         aimContainer.classList.remove("active");
-        settingsContainer.classList.remove("active");
+        settingsContainer.classList.remove("show");
+        settingsAutoLight.classList.remove("show");
         const homeScreen = document.getElementById("home-screen");
         homeScreen.style.display = "";
       } else {
         hideHomeScreen();
         aimContainer.classList.remove("active");
-        settingsContainer.classList.add("active");
+        settingsAutoLight.classList.add("show");
+        settingsContainer.classList.add("show");
       }
 
       resetBtnBorder();

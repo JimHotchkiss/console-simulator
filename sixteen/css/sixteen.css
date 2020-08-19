@@ -607,9 +607,80 @@ html {
   display: none;
 }
 
-.settings-container.active {
+.settings-container.show {
   display: flex;
-  width: 700px;
-  height: 500px;
-  background: lightpink;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+.brightness-body,
+.zoom-body,
+.enhancement-body {
+  display: flex;
+  margin-top: 8px;
+}
+
+.settings-autolight-circle-div {
+  display: none;
+}
+
+.settings-autolight-circle-div.show {
+  display: flex;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  margin-top: 474px;
+  margin-left: 318px;
+  background: #37474f;
+  border-radius: 50%;
+  border: 2px solid #0da9ff;
+  opacity: 0.6;
+}
+
+.settings-autolight-img {
+  width: 75px;
+  height: 75px;
+  margin-top: 15px;
+  margin-left: 15px;
+
+  background: transparent url("/sixteen/img/lightbulb-icon.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 40px;
+}
+
+.zoom-text,
+.enhancement-text,
+.brightess-text {
+  font-family: roboto;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+}
+.settings-minus-div {
+  min-width: 100px;
+  height: 70px;
+  background: #424242;
+}
+
+.settings-plus-div {
+  min-width: 100px;
+  height: 70px;
+  background: #424242;
+}
+
+.settings-numerical-div {
+  min-width: 150px;
+  background-color: #000;
+  border: 2px solid #424242;
+}
+
+.settings-numerical-text {
+  font-family: roboto;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 14px;
+  color: #fff;
 }
