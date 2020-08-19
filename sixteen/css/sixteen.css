@@ -123,6 +123,7 @@ html {
 }
 
 .lightbulb-icon-div {
+  cursor: pointer;
   display: flex;
   width: 700px;
   margin-top: 70px;
@@ -235,7 +236,6 @@ html {
   height: 75px;
   margin-top: 15px;
   margin-left: 15px;
-
   background: transparent url("/sixteen/img/lightbulb-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
@@ -283,7 +283,7 @@ html {
   border: 1px solid #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.1s ease;
 }
 
 .active,
@@ -505,6 +505,7 @@ html {
 }
 
 .autolight-circle-div {
+  cursor: pointer;
   width: 75px;
   height: 75px;
   margin-left: 456px;

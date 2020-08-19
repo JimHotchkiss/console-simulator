@@ -6,15 +6,42 @@ window.addEventListener("load", (event) => {
   closeModalListener();
 });
 
-// Modal
-// const spyToggleBtn = document.querySelectorAll(`[data-modal-target]`);
-// const spyCloseToggleBtn = document.querySelectorAll("[data-modal-close]");
+const modalText = [
+  {
+    id: "spy",
+    title: "SPY Mode Requirements",
+    body:
+      "Spy ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  },
+  {
+    id: "autolight",
+    title: "AUTOLIGHT Information",
+    body:
+      "Autolight ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  },
+];
 
 const openModalListener = () => {
-  const spyToggleBtn = document.getElementById("spy-toggle-div");
-  spyToggleBtn.addEventListener("click", () => {
-    const modal = document.getElementById("modal");
-    openModal(modal);
+  const modal = document.getElementById("modal");
+  const dataSelect = document.querySelectorAll("[data-modal]");
+
+  dataSelect.forEach((dataModal) => {
+    dataModal.addEventListener("click", () => {
+      const modalSubject = dataModal.dataset.modal;
+      loadModalBodyText(modalSubject);
+      openModal(modal);
+    });
+  });
+};
+
+const loadModalBodyText = (modalSubject) => {
+  const modalBody = document.getElementById("modal-body");
+  const modalTitle = document.getElementById("modal-title");
+  modalText.map((obj) => {
+    if (modalSubject === obj.id) {
+      modalTitle.innerText = obj.title;
+      modalBody.innerText = obj.body;
+    }
   });
 };
 

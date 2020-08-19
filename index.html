@@ -16,22 +16,10 @@
     <!-- Modal -->
     <div class="modal" id="modal">
       <div class="modal-header">
-        <div class="modal-title">SPY Mode Requirements</div>
+        <div id="modal-title" class="modal-title"></div>
         <button id="modal-close" class="close-modal">&times;</button>
       </div>
-      <div class="modal-body">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere saepe
-        impedit pariatur magni aliquid quibusdam nihil corporis sit. Molestiae
-        velit dolore fuga aut provident, eveniet fugiat in laudantium quaerat
-        necessitatibus! Aut, expedita? Eveniet esse quas molestiae unde, neque
-        nesciunt veniam vero exercitationem. Recusandae facere ducimus eos
-        explicabo laboriosam, qui ab nesciunt sunt. Obcaecati eius tenetur
-        voluptatibus assumenda quia quod numquam. Labore, assumenda voluptatum.
-        Hic corrupti aspernatur vitae sunt ab dicta exercitationem modi ea
-        voluptatibus. Inventore, omnis repellat corrupti natus iusto sunt
-        molestiae repudiandae enim minima aut recusandae voluptas architecto
-        eaque!
-      </div>
+      <div id="modal-body" class="modal-body"></div>
     </div>
     <div id="modal-overlay"></div>
     <!-- End Modal -->
@@ -99,7 +87,7 @@
           <div class="camera-btn-div"><div class="camera-btn-img"></div></div>
           <div class="video-btn-div"><div class="video-btn-img"></div></div>
         </div>
-        <div class="lightbulb-icon-div">
+        <div data-modal="autolight" id="autolight" class="lightbulb-icon-div">
           <div class="lightbulb-icon-cicle">
             <div class="lightbulb-icon-img"></div>
           </div>
@@ -170,17 +158,13 @@
           <h3 class="spy-toggle-title-text">SPY</h3>
         </div>
         <div class="aim-footer-container">
-          <div
-            data-modal-target="#modal"
-            id="spy-toggle-div"
-            class="spy-toggle-div"
-          >
+          <div data-modal="spy" id="spy-toggle-div" class="spy-toggle-div">
             <div class="spy-toggle-btn-on">
               <h3 class="spy-toggle-text">Off</h3>
             </div>
             <div class="spy-toggle-btn-off"></div>
           </div>
-          <div class="autolight-circle-div">
+          <div data-modal="autolight" class="autolight-circle-div">
             <div class="spy-autolight-img"></div>
           </div>
         </div>
