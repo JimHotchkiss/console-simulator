@@ -47,7 +47,7 @@ html {
   margin-bottom: 8px;
 }
 
-#bottom-nav-button {
+#settings-nav-button {
   margin-top: 8px;
 }
 
@@ -292,11 +292,11 @@ html {
 }
 
 /* AIM Container */
-#aim-container {
+.aim-container {
   display: none;
 }
 
-#aim-container-active {
+.aim-container.active {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -325,9 +325,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 90%;
-  /* height: 100px; */
   margin: 40px auto;
-  /* background: lightslategray; */
 }
 
 #aim-left-arrow {
@@ -603,4 +601,15 @@ html {
 #modal-overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.settings-container {
+  display: none;
+}
+
+.settings-container.active {
+  display: flex;
+  width: 700px;
+  height: 500px;
+  background: lightpink;
 }

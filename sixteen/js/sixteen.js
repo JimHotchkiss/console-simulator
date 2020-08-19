@@ -17,7 +17,7 @@ const modalText = [
     id: "autolight",
     title: "AUTOLIGHT Information",
     body:
-      "Autolight ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Autolight automatically adjust light settings on the light source to meet optimal light output",
   },
 ];
 
@@ -70,17 +70,22 @@ const closeModal = (modal) => {
 const addButtonListener = () => {
   const navBtns = document.getElementsByClassName("nav-buttons");
   const aimContainer = document.getElementById("aim-container");
+  const settingsContainer = document.getElementById("settings-container");
   for (let item of navBtns) {
     item.addEventListener("click", () => {
       if (item.id === "aim-nav-button") {
-        aimContainer.id = "aim-container-active";
-        changeHomeScreen();
+        hideHomeScreen();
+        settingsContainer.classList.remove("active");
+        aimContainer.classList.add("active");
       } else if (item.id === "home-nav-button") {
-        aimContainer.id = "aim-container";
+        aimContainer.classList.remove("active");
+        settingsContainer.classList.remove("active");
         const homeScreen = document.getElementById("home-screen");
         homeScreen.style.display = "";
       } else {
-        changeHomeScreen();
+        hideHomeScreen();
+        aimContainer.classList.remove("active");
+        settingsContainer.classList.add("active");
       }
 
       resetBtnBorder();
@@ -115,7 +120,7 @@ const addArrowListener = () => {
   }
 };
 
-const changeHomeScreen = () => {
+const hideHomeScreen = () => {
   const homeScreen = document.getElementById("home-screen");
   homeScreen.style.display = "none";
 };
