@@ -553,8 +553,28 @@ html {
   max-width: 90%;
 }
 
+.modal-title h3 {
+  font-family: roboto;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+}
+
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-body {
+  display: flex;
+}
+
+.modal-body-description-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-pn-text {
+  margin-left: 12px;
 }
 
 .modal .modal-body {

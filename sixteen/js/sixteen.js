@@ -11,7 +11,13 @@ const modalText = [
     id: "spy",
     title: "SPY Mode Requirements",
     body:
-      "Spy ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "SPY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+    // {
+    //   title: "Light Sourse",
+    //   pn: "0220230300",
+    //   description: "L11 LED Light Source with Advanced Imaging Modality",
+    // },
   },
   {
     id: "autolight",
@@ -36,11 +42,17 @@ const openModalListener = () => {
 
 const loadModalBodyText = (modalSubject) => {
   const modalBody = document.getElementById("modal-body");
+  const modalTitleText = document.getElementById("modal-title-text");
   const modalTitle = document.getElementById("modal-title");
+  const modalPnText = document.getElementById("modal-pn-text");
+  const modalBodyText = document.getElementById("modal-body-description-text");
   modalText.map((obj) => {
     if (modalSubject === obj.id) {
       modalTitle.innerText = obj.title;
       modalBody.innerText = obj.body;
+      // modalTitleText.innerText = obj.body.title + " : ";
+      // modalPnText.innerText = obj.body.pn;
+      // modalBodyText.innerText = obj.body.description;
     }
   });
 };
