@@ -3,236 +3,283 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sixteen/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./sixteen/js/index.js"></script>
+    <!-- Test -->
     <link rel="stylesheet" href="./sixteen/css/sixteen.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <script src="./sixteen/js/sixteen.js"></script>
-
-    <title>Sixteen Simulator</title>
+    <!-- Test -->
+    <title>Console Simulator</title>
   </head>
   <body>
-    <!-- Modal -->
-    <div class="modal" id="modal">
-      <div class="modal-header">
-        <div id="modal-title" class="modal-title"></div>
-        <button id="modal-close" class="close-modal">&times;</button>
+    <div class="outer-container">
+      <div class="header">
+        <div class="stryker-logo"></div>
+        <div class="info-div"></div>
       </div>
-      <div id="modal-body" class="modal-body">
-        <h3 id="modal-title-text"></h3>
-        <h3 id="modal-pn-text" class="modal-pn-text"></h3>
-        <div class="modal-body-description">
-          <p id="modal-body-description-text"></p>
-        </div>
-      </div>
-    </div>
-    <div id="modal-overlay"></div>
-    <!-- End Modal -->
-    <div class="display-screen">
-      <div id="navigation-container">
-        <div id="home-nav-button" class="nav-buttons">
-          <div class="home-icon"></div>
-        </div>
-        <div id="aim-nav-button" class="nav-buttons">
-          <div class="aim-icon"><h4 class="aim-text">AIM</h4></div>
-        </div>
-        <div id="settings-nav-button" class="nav-buttons">
-          <div class="gear-icon"></div>
-        </div>
-      </div>
-      <!-- Home Screen -->
-      <div id="home-screen" class="controls-specialty-container">
-        <div class="specialty-container">
-          <div id="left-arrow" class="arrow-div">
-            <div class="left-arrow-img"></div>
+      <!-- body -->
+      <div class="body">
+        <div class="navigation">
+          <div class="side-bar">
+            <div id="round-img-div" class="round-img-div">
+              <div class="home-img-div"></div>
+            </div>
           </div>
-          <div id="specialty-default" class="specialty-div">
-            <h3 class="specialty">STANDARD</h3>
+          <div class="consoles-div"></div>
+        </div>
+        <!-- Simulator-->
+        <div id="simulator" class="simulator">
+          <div class="modal" id="modal">
+            <div class="modal-header">
+              <div id="modal-title" class="modal-title"></div>
+              <button id="modal-close" class="close-modal">&times;</button>
+            </div>
+            <div id="modal-body" class="modal-body">
+              <h3 id="modal-title-text"></h3>
+              <h3 id="modal-pn-text" class="modal-pn-text"></h3>
+              <div class="modal-body-description">
+                <p id="modal-body-description-text"></p>
+              </div>
+            </div>
           </div>
+          <div id="modal-overlay"></div>
+          <!-- End Modal -->
+          <div class="display-screen">
+            <div id="navigation-container">
+              <div id="home-nav-button" class="nav-buttons">
+                <div class="home-icon"></div>
+              </div>
+              <div id="aim-nav-button" class="nav-buttons">
+                <div class="aim-icon"><h4 class="aim-text">AIM</h4></div>
+              </div>
+              <div id="settings-nav-button" class="nav-buttons">
+                <div class="gear-icon"></div>
+              </div>
+            </div>
+            <!-- Home Screen -->
+            <div id="home-screen" class="controls-specialty-container">
+              <div class="specialty-container">
+                <div id="left-arrow" class="arrow-div">
+                  <div class="left-arrow-img"></div>
+                </div>
+                <div id="specialty-default" class="specialty-div">
+                  <h3 class="specialty">STANDARD</h3>
+                </div>
 
-          <!-- Carousel -->
-          <div class="specialty-slides">
-            <p class="specialty">STANDARD</p>
-          </div>
-          <div class="specialty-slides">
-            <p class="specialty">ARTHROSCOPY</p>
-          </div>
-          <div class="specialty-slides">
-            <p class="specialty">CYSTOSCOPY</p>
-          </div>
-          <div class="specialty-slides">
-            <p class="specialty">HYSTEROSCOPY</p>
-          </div>
-          <div class="specialty-slides">
-            <p class="specialty">LAPAROSCOPY</p>
-          </div>
-          <div class="specialty-slides">
-            <p class="specialty">LASER</p>
-          </div>
-          <div class="specialty-slides">
-            <p class="specialty">MICROSCOPE</p>
-          </div>
+                <!-- Carousel -->
+                <div class="specialty-slides">
+                  <p class="specialty">STANDARD</p>
+                </div>
+                <div class="specialty-slides">
+                  <p class="specialty">ARTHROSCOPY</p>
+                </div>
+                <div class="specialty-slides">
+                  <p class="specialty">CYSTOSCOPY</p>
+                </div>
+                <div class="specialty-slides">
+                  <p class="specialty">HYSTEROSCOPY</p>
+                </div>
+                <div class="specialty-slides">
+                  <p class="specialty">LAPAROSCOPY</p>
+                </div>
+                <div class="specialty-slides">
+                  <p class="specialty">LASER</p>
+                </div>
+                <div class="specialty-slides">
+                  <p class="specialty">MICROSCOPE</p>
+                </div>
 
-          <div id="right-arrow" class="arrow-div">
-            <div class="right-arrow-img"></div>
-          </div>
-        </div>
-        <!-- Dots/Bullet-->
-        <div class="dot-container">
-          <span id="default-dot" class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span>
-          <span class="dot" onclick="currentSlide(7)"></span>
-        </div>
-        <div class="controls-container">
-          <div class="wb-btn-div"><h3 class="wb-btn-text">WB</h3></div>
-          <div class="camera-btn-div"><div class="camera-btn-img"></div></div>
-          <div class="video-btn-div"><div class="video-btn-img"></div></div>
-        </div>
-        <div data-modal="autolight" id="autolight" class="lightbulb-icon-div">
-          <div class="lightbulb-icon-cicle">
-            <div class="lightbulb-icon-img"></div>
-          </div>
-        </div>
-      </div>
-      <!-- End Home Screen -->
-      <!-- AIM Screen -->
-      <div id="aim-container" class="aim-container">
-        <div class="aim-title-container">
-          <h3 class="aim-title-text">SPY</h3>
-        </div>
-        <div class="aim-modalities-container">
-          <div class="aim-modality-div">
-            <!-- AIM Carousel -->
-            <div id="aim-left-arrow" class="aim-arrow-div">
-              <div class="aim-left-arrow-img"></div>
+                <div id="right-arrow" class="arrow-div">
+                  <div class="right-arrow-img"></div>
+                </div>
+              </div>
+              <!-- Dots/Bullet-->
+              <div class="dot-container">
+                <span
+                  id="default-dot"
+                  class="dot"
+                  onclick="currentSlide(1)"
+                ></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+              </div>
+              <div class="controls-container">
+                <div class="wb-btn-div"><h3 class="wb-btn-text">WB</h3></div>
+                <div class="camera-btn-div">
+                  <div class="camera-btn-img"></div>
+                </div>
+                <div class="video-btn-div">
+                  <div class="video-btn-img"></div>
+                </div>
+              </div>
+              <div
+                data-modal="autolight"
+                id="autolight"
+                class="lightbulb-icon-div"
+              >
+                <div class="lightbulb-icon-cicle">
+                  <div class="lightbulb-icon-img"></div>
+                </div>
+              </div>
             </div>
-            <div id="aim-specialty-default" class="aim-specialty-div">
-              <h3 class="specialty">OVERLAY</h3>
-            </div>
+            <!-- End Home Screen -->
+            <!-- AIM Screen -->
+            <div id="aim-container" class="aim-container">
+              <div class="aim-title-container">
+                <h3 class="aim-title-text">SPY</h3>
+              </div>
+              <div class="aim-modalities-container">
+                <div class="aim-modality-div">
+                  <!-- AIM Carousel -->
+                  <div id="aim-left-arrow" class="aim-arrow-div">
+                    <div class="aim-left-arrow-img"></div>
+                  </div>
+                  <div id="aim-specialty-default" class="aim-specialty-div">
+                    <h3 class="specialty">OVERLAY</h3>
+                  </div>
 
-            <div id="right-arrow" class="arrow-div">
-              <div class="right-arrow-img"></div>
-            </div>
-            <!-- End AIM Carousel-->
-            <!-- End AIM Modality DIV-->
-          </div>
-          <div class="dot-container">
-            <span id="default-dot" class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>
-        <div class="gain-brightness-title-div">
-          <div class="gain-title-div">
-            <h3 class="gain-title-text" style="color: white;">Gain</h3>
-          </div>
-          <div class="brightness-title-div" style="color: white;">
-            <h3 class="brightness-title-text">Brightness</h3>
-          </div>
-        </div>
+                  <div id="right-arrow" class="arrow-div">
+                    <div class="right-arrow-img"></div>
+                  </div>
+                  <!-- End AIM Carousel-->
+                  <!-- End AIM Modality DIV-->
+                </div>
+                <div class="dot-container">
+                  <span
+                    id="default-dot"
+                    class="dot"
+                    onclick="currentSlide(1)"
+                  ></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+              </div>
+              <div class="gain-brightness-title-div">
+                <div class="gain-title-div">
+                  <h3 class="gain-title-text" style="color: white;">Gain</h3>
+                </div>
+                <div class="brightness-title-div" style="color: white;">
+                  <h3 class="brightness-title-text">Brightness</h3>
+                </div>
+              </div>
 
-        <div class="aim-adjustments-container">
-          <div class="gain-div">
-            <div class="gain-minus-div">
-              <div class="minus-img"></div>
+              <div class="aim-adjustments-container">
+                <div class="gain-div">
+                  <div class="gain-minus-div">
+                    <div class="minus-img"></div>
+                  </div>
+                  <div class="gain-value-div">
+                    <h3 class="gain-value-text">0</h3>
+                  </div>
+                  <div class="gain-plus-div">
+                    <div class="plus-img"></div>
+                  </div>
+                </div>
+                <div class="brightness-div">
+                  <div class="gain-minus-div">
+                    <div class="minus-img"></div>
+                  </div>
+                  <div class="gain-value-div">
+                    <h3 class="gain-value-text">0</h3>
+                  </div>
+                  <div class="gain-plus-div">
+                    <div class="plus-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="spy-toggle-title">
+                <h3 class="spy-toggle-title-text">SPY</h3>
+              </div>
+              <div class="aim-footer-container">
+                <div
+                  data-modal="spy"
+                  id="spy-toggle-div"
+                  class="spy-toggle-div"
+                >
+                  <div class="spy-toggle-btn-on">
+                    <h3 class="spy-toggle-text">Off</h3>
+                  </div>
+                  <div class="spy-toggle-btn-off"></div>
+                </div>
+                <div data-modal="autolight" class="autolight-circle-div">
+                  <div class="spy-autolight-img"></div>
+                </div>
+              </div>
             </div>
-            <div class="gain-value-div">
-              <h3 class="gain-value-text">0</h3>
+            <!-- End AIM Screen -->
+            <!-- Settings Screen -->
+            <div id="settings-container" class="settings-container">
+              <div class="brightness-container">
+                <div class="settings-title">
+                  <h3 class="brightess-text">Brightness</h3>
+                </div>
+                <div class="brightness-body">
+                  <div class="settings-minus-div">
+                    <div class="minus-img"></div>
+                  </div>
+                  <div class="settings-numerical-div">
+                    <h3 class="settings-numerical-text">0</h3>
+                  </div>
+                  <div class="settings-plus-div">
+                    <div class="plus-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="zoom-container">
+                <div class="settings-title">
+                  <h3 class="zoom-text">Zoom</h3>
+                </div>
+                <div class="zoom-body">
+                  <div class="settings-minus-div">
+                    <div class="minus-img"></div>
+                  </div>
+                  <div class="settings-numerical-div">
+                    <h3 class="settings-numerical-text">0</h3>
+                  </div>
+                  <div class="settings-plus-div">
+                    <div class="plus-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="enhancement-container">
+                <div class="settings-title">
+                  <h3 class="enhancement-text">Enhancement</h3>
+                </div>
+                <div class="enhancement-body">
+                  <div class="settings-minus-div">
+                    <div class="minus-img"></div>
+                  </div>
+                  <div class="settings-numerical-div">
+                    <h3 class="settings-numerical-text">0</h3>
+                  </div>
+                  <div class="settings-plus-div">
+                    <div class="plus-img"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="gain-plus-div">
-              <div class="plus-img"></div>
-            </div>
-          </div>
-          <div class="brightness-div">
-            <div class="gain-minus-div">
-              <div class="minus-img"></div>
-            </div>
-            <div class="gain-value-div">
-              <h3 class="gain-value-text">0</h3>
-            </div>
-            <div class="gain-plus-div">
-              <div class="plus-img"></div>
+            <div
+              id="settings-autolight"
+              data-modal="autolight"
+              class="settings-autolight-circle-div"
+            >
+              <div class="settings-autolight-img"></div>
             </div>
           </div>
         </div>
-        <div class="spy-toggle-title">
-          <h3 class="spy-toggle-title-text">SPY</h3>
-        </div>
-        <div class="aim-footer-container">
-          <div data-modal="spy" id="spy-toggle-div" class="spy-toggle-div">
-            <div class="spy-toggle-btn-on">
-              <h3 class="spy-toggle-text">Off</h3>
-            </div>
-            <div class="spy-toggle-btn-off"></div>
-          </div>
-          <div data-modal="autolight" class="autolight-circle-div">
-            <div class="spy-autolight-img"></div>
-          </div>
-        </div>
-      </div>
-      <!-- End AIM Screen -->
-      <!-- Settings Screen -->
-      <div id="settings-container" class="settings-container">
-        <div class="brightness-container">
-          <div class="settings-title">
-            <h3 class="brightess-text">Brightness</h3>
-          </div>
-          <div class="brightness-body">
-            <div class="settings-minus-div">
-              <div class="minus-img"></div>
-            </div>
-            <div class="settings-numerical-div">
-              <h3 class="settings-numerical-text">0</h3>
-            </div>
-            <div class="settings-plus-div">
-              <div class="plus-img"></div>
-            </div>
-          </div>
-        </div>
-        <div class="zoom-container">
-          <div class="settings-title">
-            <h3 class="zoom-text">Zoom</h3>
-          </div>
-          <div class="zoom-body">
-            <div class="settings-minus-div">
-              <div class="minus-img"></div>
-            </div>
-            <div class="settings-numerical-div">
-              <h3 class="settings-numerical-text">0</h3>
-            </div>
-            <div class="settings-plus-div">
-              <div class="plus-img"></div>
-            </div>
-          </div>
-        </div>
-        <div class="enhancement-container">
-          <div class="settings-title">
-            <h3 class="enhancement-text">Enhancement</h3>
-          </div>
-          <div class="enhancement-body">
-            <div class="settings-minus-div">
-              <div class="minus-img"></div>
-            </div>
-            <div class="settings-numerical-div">
-              <h3 class="settings-numerical-text">0</h3>
-            </div>
-            <div class="settings-plus-div">
-              <div class="plus-img"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        id="settings-autolight"
-        data-modal="autolight"
-        class="settings-autolight-circle-div"
-      >
-        <div class="settings-autolight-img"></div>
+        <!-- End Simulator-->
       </div>
     </div>
   </body>

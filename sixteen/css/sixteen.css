@@ -16,7 +16,6 @@ html {
   width: 1000px;
   height: 588px;
   background: #212121;
-  margin: 100px auto;
 }
 
 #navigation-container {
@@ -136,7 +135,7 @@ html {
   height: 120px;
   margin-top: 50px;
   margin-left: 50px;
-  background: transparent url("/sixteen/img/home-icon.png") 0% 0% no-repeat
+  background: transparent url("/sixteen/img/icon-home3.svg") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 90px;
