@@ -23,6 +23,23 @@ html {
   z-index: 10;
 }
 
+.dashboard-title-div {
+  padding-top: 18px;
+  margin-left: 34%;
+}
+
+.dashboard-title-div h3 {
+  font: italic small-caps bold 12px/30px roboto;
+  font-size: 24px;
+  font-weight: 400;
+
+  color: #414141;
+}
+
+.dashboard-title-div span {
+  color: #2b72cc;
+}
+
 .stryker-logo {
   width: 120px;
   height: 30px;
@@ -86,7 +103,7 @@ html {
 
 /* Consoles */
 
-.ccu-div ul {
+ul {
   list-style-type: none;
 }
 
@@ -99,18 +116,14 @@ html {
   color: #414141;
 }
 
-.ccu-div li {
+li {
   cursor: pointer;
   font-family: roboto;
   font-size: 14px;
   font-weight: 200;
   padding-top: 18px;
-  margin-left: 18px;
+  margin-left: 22px;
   color: #414141;
-}
-
-.lightsource-div ul {
-  list-style-type: none;
 }
 
 .lightsource-div .lightsource-title-text {
@@ -122,11 +135,10 @@ html {
   color: #414141;
 }
 
-.lightsource-div li {
-  cursor: pointer;
+.sportsmed-div .sportsmed-title-text {
   font-family: roboto;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 18px;
+  font-weight: 400;
   padding-top: 18px;
   margin-left: 18px;
   color: #414141;
