@@ -18,6 +18,18 @@ html {
   background: #212121;
 }
 
+.sixteen-title-div {
+  margin: auto;
+  margin-bottom: 8px;
+}
+
+.sixteen-title-div h3 {
+  font-family: roboto;
+  font-size: 34px;
+  font-weight: 600;
+  color: #424242;
+}
+
 #navigation-container {
   display: flex;
   flex-direction: column;

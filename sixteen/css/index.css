@@ -98,7 +98,8 @@ html {
 
 .simulator.show {
   display: flex;
-  margin: 70px auto;
+  flex-direction: column;
+  margin: auto;
 }
 
 /* Consoles */
