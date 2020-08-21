@@ -8,32 +8,213 @@
   flex-direction: column;
   width: 1000px;
   height: 588px;
-  border: 1px solid black;
   margin: 50px auto;
 }
 
 .crossfire-ui-div {
+  display: flex;
   width: 100%;
   height: 400px;
-  border: 1px solid red;
 }
 
 .crossfire-plugin-div {
   display: flex;
-  justify-content: space-around;
   width: 100%;
-  height: 100px;
-  border: 1px solid blue;
 }
 
 .footpedal-div {
   width: 200px;
-  height: 100px;
-  background: pink;
+  height: 170px;
+  margin-left: 170px;
+  padding-top: 50px;
+}
+
+.footpedal-image {
+  cursor: pointer;
+  width: 200px;
+  height: 170px;
+  background: transparent url("/sixteen/img/footpedal.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 200px;
 }
 
 .handpiece-div {
   width: 200px;
-  height: 100px;
-  background: lightskyblue;
+  height: 120px;
+  padding-top: 70px;
+  margin-left: 100px;
+}
+
+.handpiece-image {
+  cursor: pointer;
+  width: 300px;
+  height: 170px;
+  background: transparent url("/sixteen/img/handpiece.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 300px;
+}
+
+.menu-error-div {
+  width: 100px;
+  height: 400px;
+  background: #f6f0e8;
+  border-bottom: 2px solid #414141;
+  border-top: 2px solid #414141;
+  border-left: 2px solid #414141;
+}
+
+.crossfire-display-screen-div {
+  width: 770px;
+  height: 400px;
+  background: #414141;
+}
+
+.select-adjust-div {
+  width: 130px;
+  height: 400px;
+  background: #f6f0e8;
+  border-bottom: 2px solid #414141;
+  border-top: 2px solid #414141;
+  border-right: 2px solid #414141;
+}
+
+.menu-div {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  margin-top: 150px;
+  background-color: #fff;
+  border: 4px solid #0f5298;
+  border-radius: 50%;
+}
+
+.menu-text {
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0f5298;
+  padding-top: 20px;
+  padding-left: 8px;
+}
+
+.exclamation {
+  position: relative;
+  top: -10px;
+}
+
+.exclamation-mark {
+  cursor: pointer;
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 60px solid red;
+  margin: 90px 0 0 18px;
+}
+
+.exclamation-mark::after {
+  content: "!";
+  position: absolute;
+  font-size: 40px;
+  font-family: roboto;
+  color: #fff;
+  top: 14px;
+  left: -6px;
+  font-weight: bold;
+}
+
+.adjust-top-arrow-div {
+  height: 90px;
+  width: 90px;
+  background: #0f5298;
+  margin: auto;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-left: 3px solid lightslategray;
+  border-right: 3px solid lightslategray;
+}
+
+.adjust-bottom-arrow-div {
+  height: 90px;
+  width: 90px;
+  background: #0f5298;
+  margin: auto;
+  padding-top: 8px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-left: 3px solid lightslategray;
+  border-right: 3px solid lightslategray;
+}
+
+.crossfire-select-div {
+  height: 200px;
+  width: 90px;
+  background: #0f5298;
+  margin: auto;
+  padding-top: 60px;
+  border-left: 3px solid lightslategray;
+  border-right: 3px solid lightslategray;
+}
+
+.adjust-top-circle {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  padding-top: 17px;
+  padding-left: 10px;
+}
+
+.adjust-bottom-circle {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  padding-top: 23px;
+  padding-left: 10px;
+}
+
+.adjust-top-img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: transparent url("/sixteen/img/xfr-uparrow.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 50px;
+}
+
+.adjust-bottom-img {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: transparent url("/sixteen/img/xfr-downarrow.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 50px;
+}
+
+.select-circle {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 50%;
+  padding-top: 8px;
+  padding-left: 10px;
+}
+
+.select-img {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  background: transparent url("/sixteen/img/select.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 50px;
 }
