@@ -3,7 +3,7 @@ window.addEventListener("load", (event) => {
 });
 
 const selectConsoleListener = () => {
-  const roundImgDiv = document.getElementById("round-img-div");
+  const roundImgDiv = document.getElementById("1688");
   roundImgDiv.addEventListener("click", () => {
     const simulator = document.getElementById("simulator");
     simulator.classList.toggle("show");

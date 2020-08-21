@@ -83,3 +83,51 @@ html {
   display: flex;
   margin: 70px auto;
 }
+
+/* Consoles */
+
+.ccu-div ul {
+  list-style-type: none;
+}
+
+.ccu-div .ccu-title-text {
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 18px;
+  margin-left: 18px;
+  color: #414141;
+}
+
+.ccu-div li {
+  cursor: pointer;
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: 200;
+  padding-top: 18px;
+  margin-left: 18px;
+  color: #414141;
+}
+
+.lightsource-div ul {
+  list-style-type: none;
+}
+
+.lightsource-div .lightsource-title-text {
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 18px;
+  margin-left: 18px;
+  color: #414141;
+}
+
+.lightsource-div li {
+  cursor: pointer;
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: 200;
+  padding-top: 18px;
+  margin-left: 18px;
+  color: #414141;
+}
