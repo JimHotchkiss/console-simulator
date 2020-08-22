@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <script src="./sixteen/js/sixteen.js"></script>
+    <script src="./sixteen/js/crossfire.js"></script>
     <!-- Test -->
     <title>Console Simulator</title>
   </head>
@@ -323,6 +324,20 @@
         <!-- End 1688 Simulator-->
         <!-- Crossfire Simulator-->
         <div id="crossfire-console" class="crossfire-container">
+          <!-- Test popup-->
+          <!-- <p>Move the mouse over the text below:</p>
+
+          <div class="tooltip">
+            Hover over me
+            <span class="tooltiptext">Tooltip text</span>
+          </div>
+
+          <p>
+            Note that the position of the tooltip text isn't very good. Go back
+            to the tutorial and continue reading on how to position the tooltip
+            in a desirable way.
+          </p> -->
+          <!-- End Test popup-->
           <div class="crossfire-title-div">
             <h3 class="crossfire-title-text">Crossfire 2</h3>
           </div>
@@ -333,7 +348,28 @@
                 <div class="exclamation-mark"></div>
               </div>
             </div>
-            <div class="crossfire-display-screen-div"></div>
+            <div class="crossfire-display-screen-div">
+              <div class="rf-div">
+                <div class="rf-data-div"></div>
+                <div class="rf-title-div">
+                  <h3 class="rf-title-text">SERFAS</h3>
+                </div>
+              </div>
+              <div class="shaver-div">
+                <div class="shaver-data-div">
+                  <div class="shaver-direction-div">
+                    <div class="direction-img"></div>
+                  </div>
+                  <div class="rpm-hc-div">
+                    <div class="rpm-div"><h3 class="rpm-text">1800</h3></div>
+                    <div class="hc-div"><hc-text>HC</hc-text></div>
+                  </div>
+                </div>
+                <div class="shaver-title-div">
+                  <h3 id="shaver-title-text" class="shaver-title-text"></h3>
+                </div>
+              </div>
+            </div>
             <div class="select-adjust-div">
               <div class="adjust-top-arrow-div">
                 <div class="adjust-top-circle">
@@ -351,13 +387,13 @@
             </div>
           </div>
           <div class="crossfire-plugin-div">
-            <div class="footpedal-div">
+            <div id="footpedal" class="footpedal-div">
               <div class="footpedal-image"></div>
             </div>
             <div class="handpiece-div">
-              <div class="handpiece-image"></div>
+              <div id="shaver" class="handpiece-image"></div>
             </div>
-            <div class="rfwand-div">
+            <div id="rf" class="rfwand-div">
               <div class="rfwand-image"></div>
             </div>
           </div>

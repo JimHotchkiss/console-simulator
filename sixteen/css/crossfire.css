@@ -95,6 +95,7 @@
 }
 
 .crossfire-display-screen-div {
+  display: flex;
   width: 770px;
   height: 400px;
   background: #414141;
@@ -247,4 +248,122 @@
     padding-box;
   opacity: 1;
   background-size: 50px;
+}
+
+.rf-div {
+  width: 240px;
+  height: 390px;
+  margin: auto;
+  background: #f6f0e8;
+  border-radius: 10px;
+}
+
+.rf-data-div {
+  width: 240px;
+  height: 320px;
+  margin: auto;
+  background: #0f5298;
+  border: 3px solid #f6f0e8;
+  border-radius: 10px;
+}
+
+.rf-title-div h3 {
+  font-size: 34px;
+  font-family: roboto;
+  color: #0f5298;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.shaver-div {
+  width: 510px;
+  height: 390px;
+  margin: auto;
+  background: #f6f0e8;
+  border-radius: 10px;
+}
+
+.shaver-data-div {
+  display: flex;
+  width: 510px;
+  height: 320px;
+  margin: auto;
+  background: #0f5298;
+  border: 3px solid #f6f0e8;
+  border-radius: 10px;
+}
+
+.shaver-title-div h3 {
+  font-size: 34px;
+  font-family: roboto;
+  color: #0f5298;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.shaver-direction-div {
+  width: 90px;
+  height: 313px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.rpm-hc-div {
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  height: 313px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.direction-img {
+  width: 70px;
+  height: 70px;
+  background: transparent url("/sixteen/img/osc-arrow.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 70px;
+  margin: auto;
+  margin-top: 230px;
+}
+
+.rpm-text {
+  font-size: 130px;
+  font-family: roboto;
+  color: #f6f0e8;
+  text-align: right;
+  padding-top: 120px;
+}
+
+hc-text {
+  font-size: 21px;
+  font-family: roboto;
+  color: #f6f0e8;
+  padding-left: 370px;
+}
+
+/* test popup*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
