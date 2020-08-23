@@ -1,5 +1,5 @@
 window.addEventListener("load", (event) => {
-  handpieceEventListener();
+  // handpieceEventListener();
 });
 
 const shavers = [
@@ -111,17 +111,17 @@ const shavers = [
   { name: "5.5mm XFX TOMCAT" },
 ];
 
-const handpieceEventListener = () => {
-  const handpiece = document.getElementById("shaver");
-  handpiece.addEventListener("click", () => {
-    const shaverTitle = document.getElementById("shaver-title-text");
-    shaverTitle.innerText = shavers[0].name;
-    listShavers();
-  });
-};
+// const handpieceEventListener = () => {
+//   const handpiece = document.getElementById("shaver");
+//   handpiece.addEventListener("click", () => {
+//     const shaverTitle = document.getElementById("shaver-title-text");
+//     shaverTitle.innerText = shavers[0].name;
+//     listShavers();
+//   });
+// };
 
-const listShavers = () => {
-  for (let item of shavers) {
-    console.log(item.name);
-  }
-};
+// const listShavers = () => {
+//   for (let item of shavers) {
+//     console.log(item.name);
+//   }
+// };
