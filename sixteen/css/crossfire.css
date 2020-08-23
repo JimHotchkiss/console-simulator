@@ -17,11 +17,12 @@
   display: flex;
   width: 1000px;
   height: 475px;
+  border: 2px solid #01225d;
 }
 
 .menu-error-div {
   width: 125px;
-  height: 473px;
+  height: 471px;
   background: lightgreen;
 }
 
@@ -34,7 +35,7 @@
 
 .adjust-selector-div {
   width: 125px;
-  height: 473px;
+  height: 471px;
   background: lightsteelblue;
 }
 
@@ -42,6 +43,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-left: 8px;
   width: 150px;
   height: 475px;
 }
@@ -137,7 +139,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin: 13px auto;
+  margin: 14px auto;
   background: #01225d;
 }
 
