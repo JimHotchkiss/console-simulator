@@ -129,8 +129,16 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin: 13px auto;
+  margin: 14px auto;
   border: 6px solid #01225d;
+}
+
+.plug-inner-most-div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 13px auto;
+  background: #01225d;
 }
 
 .rf-plug-img {
