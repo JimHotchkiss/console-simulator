@@ -17,6 +17,8 @@
   display: flex;
   width: 1000px;
   height: 475px;
+  margin: auto;
+  margin-bottom: 24px;
   border: 2px solid #01225d;
   background: #c6c7c9;
   border-radius: 10px;
@@ -84,7 +86,27 @@
   width: 750px;
   height: 250px;
   margin-top: 110px;
+  border-radius: 10px;
+  border: 3px solid #818083;
   background: lightseagreen;
+}
+
+.first-border-display-screen {
+  width: 741px;
+  height: 245px;
+  padding-top: 20px;
+  padding-left: 21px;
+  border-radius: 8px;
+  background: #01225d;
+}
+
+.inside-display-screen {
+  width: 700px;
+  height: 204px;
+
+  border-radius: 8px;
+  background: #18478e;
+  border: 4px solid #fff;
 }
 
 .adjust-selector-div {
