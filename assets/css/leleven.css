@@ -1,0 +1,20 @@
+.l11-container {
+  display: none;
+}
+.l11-container.show {
+  display: flex;
+  width: 1180px;
+  height: 409px;
+  background: #000;
+  border-radius: 30px;
+  margin: auto;
+}
+
+.l11-gui {
+  width: 520px;
+  height: 312px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 200px;
+  background: #212121;
+}

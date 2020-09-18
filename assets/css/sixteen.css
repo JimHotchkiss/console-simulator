@@ -87,7 +87,8 @@ html {
   height: 100px;
   margin: 5px auto;
   margin-left: 40px;
-  background: transparent url("/sixteen/img/right-arrow.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/right-arrow.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 35px;
@@ -106,7 +107,8 @@ html {
   height: 100px;
   margin: 5px auto;
   margin-left: 30px;
-  background: transparent url("/sixteen/img/left-arrow.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/left-arrow.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 35px;
@@ -147,7 +149,8 @@ html {
   height: 120px;
   margin-top: 50px;
   margin-left: 50px;
-  background: transparent url("/sixteen/img/icon-home3.svg") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/icon-home3.svg") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 90px;
@@ -174,7 +177,8 @@ html {
   height: 120px;
   margin-top: 50px;
   margin-left: 50px;
-  background: transparent url("/sixteen/img/gear-icon.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/gear-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 90px;
@@ -208,7 +212,8 @@ html {
   height: 120px;
   margin-top: 25px;
   margin-left: 40px;
-  background: transparent url("/sixteen/img/camera-icon.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/camera-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 80px;
@@ -226,7 +231,8 @@ html {
   height: 120px;
   margin-top: 30px;
   margin-left: 35px;
-  background: transparent url("/sixteen/img/video-icon.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/video-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 95px;
@@ -247,7 +253,8 @@ html {
   height: 75px;
   margin-top: 15px;
   margin-left: 15px;
-  background: transparent url("/sixteen/img/lightbulb-icon.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/lightbulb-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 40px;
@@ -352,7 +359,8 @@ html {
   height: 100px;
   margin: 5px auto;
   margin-left: 30px;
-  background: transparent url("/sixteen/img/left-arrow.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/left-arrow.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 35px;
@@ -426,7 +434,8 @@ html {
   width: 30px;
   height: 30px;
   margin: 20px auto;
-  background: transparent url("/sixteen/img/plus-sign.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/plus-sign.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 30px;
@@ -436,7 +445,8 @@ html {
   width: 30px;
   height: 30px;
   margin: 30px auto;
-  background: transparent url("/sixteen/img/minus-sign.png") 0% 0% no-repeat
+
+  background: transparent url("/assets/img/minus-sign.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 30px;
@@ -530,7 +540,7 @@ html {
   margin-top: 15px;
   margin-left: 15px;
 
-  background: transparent url("/sixteen/img/lightbulb-icon.png") 0% 0% no-repeat
+  background: transparent url("/assets/img/lightbulb-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 40px;
@@ -675,7 +685,7 @@ html {
   margin-top: 15px;
   margin-left: 15px;
 
-  background: transparent url("/sixteen/img/lightbulb-icon.png") 0% 0% no-repeat
+  background: transparent url("/assets/img/lightbulb-icon.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
   background-size: 40px;
