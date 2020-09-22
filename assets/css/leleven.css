@@ -10,11 +10,40 @@
   margin: auto;
 }
 
+.iris-power-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.power-button-div {
+  width: 40px;
+  height: 40px;
+  margin-top: 340px;
+  margin-left: 30px;
+  background: transparent url("/assets/img/power-button.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 40px;
+  cursor: pointer;
+}
+
+.power-button-div.on {
+  width: 40px;
+  height: 40px;
+  margin-top: 340px;
+  margin-left: 30px;
+
+  background: transparent url("/assets/img/power-button-on.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 40px;
+}
+
 .l11-gui {
   width: 520px;
   height: 312px;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 200px;
+  margin-left: 130px;
   background: #212121;
 }
