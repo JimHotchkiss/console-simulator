@@ -15,10 +15,52 @@
   flex-direction: column;
 }
 
+.iris-div {
+  background: #000;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-left: 50px;
+  border: 3px solid #fff;
+}
+
+.iris-inner-div {
+  height: 170px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.iris-plug-div {
+  width: 20px;
+  height: 20px;
+  background: transparent url("/assets/img/iris-off.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 20px;
+  cursor: pointer;
+  border: 1px solid #d3d3d3;
+  border-radius: 50%;
+  transition: ease-in-out 0.1s;
+}
+
+.iris-plug-div.on {
+  width: 25px;
+  height: 25px;
+  background: transparent url("/assets/img/iris-on.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: ease-in-out 0.1s;
+}
+
 .power-button-div {
   width: 40px;
   height: 40px;
-  margin-top: 340px;
+  margin-top: 130px;
   margin-left: 30px;
   background: transparent url("/assets/img/power-button.png") 0% 0% no-repeat
     padding-box;
@@ -28,9 +70,9 @@
 }
 
 .power-button-div.on {
-  width: 40px;
-  height: 40px;
-  margin-top: 340px;
+  width: 50px;
+  height: 50px;
+  margin-top: 130px;
   margin-left: 30px;
 
   background: transparent url("/assets/img/power-button-on.png") 0% 0% no-repeat
@@ -44,6 +86,6 @@
   height: 312px;
   margin-top: auto;
   margin-bottom: auto;
-  margin-left: 130px;
+  margin-left: 70px;
   background: #212121;
 }
