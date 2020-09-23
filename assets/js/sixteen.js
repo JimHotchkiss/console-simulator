@@ -85,7 +85,7 @@ const addButtonListener = () => {
   const settingsContainer = document.getElementById("settings-container");
   const settingsAutoLight = document.getElementById("settings-autolight");
   for (let item of navBtns) {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (currentEvent) => {
       if (item.id === "aim-nav-button") {
         hideHomeScreen();
         settingsContainer.classList.remove("show");
@@ -104,8 +104,9 @@ const addButtonListener = () => {
         settingsContainer.classList.add("show");
       }
 
-      resetBtnBorder(clickedItem);
-      const btn = clickedItem.currentTarget;
+      resetBtnBorder(currentEvent);
+      console.log(currentEvent);
+      const btn = currentEvent.currentTarget;
       setBtnBorder(btn);
     });
   }
