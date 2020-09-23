@@ -206,16 +206,116 @@
   opacity: 0.8;
 }
 
-.intensity-div {
+.intensity-container {
+  display: flex;
+  flex-direction: column;
   height: auto;
   width: 100%;
-  background: lightpink;
+}
+
+.intensity-title-div {
+  width: 100px;
+  margin-left: 70px;
+  margin-top: 30px;
+  margin-bottom: 6px;
+}
+
+.intensity-title-div p {
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.intensity-carousel-div {
+  display: flex;
+  width: 270px;
+  height: 50px;
+  background: lightskyblue;
+  margin: auto;
+}
+
+.intensity-value-div {
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  padding-top: 3px;
+  font-family: roboto;
+  font-size: 34px;
+  font-weight: 900;
+  color: #fff;
+  background: #000;
+  border: 3px solid #424242;
+  margin: auto;
+}
+
+.l11-minus-div {
+  height: 100%;
+  width: 55px;
+  background: #424242;
+}
+
+.l11-plus-div {
+  height: 100%;
+  width: 55px;
+  background: #424242;
+}
+
+.l11-minus-img {
+  width: 30px;
+  height: 20px;
+  margin-left: 15px;
+  margin-top: 21px;
+  background: transparent url("/assets/img/minus-sign.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 30px;
+}
+
+.l11-plus-img {
+  width: 30px;
+  height: 40px;
+  margin-left: 13px;
+  margin-top: 10px;
+  background: transparent url("/assets/img/plus-sign.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  background-size: 30px;
+}
+
+.spy-mode-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.spy-mode-title {
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  margin-top: 18px;
+  margin-bottom: 4px;
+  margin-left: 22px;
 }
 
 .spy-mode-div {
-  height: auto;
-  width: 100%;
-  background: lightskyblue;
+  height: 50px;
+  width: 90%;
+  margin: auto;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: #000;
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 6px;
+  text-align: center;
+  color: #fff;
 }
 
 .home-l11-icon {
