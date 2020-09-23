@@ -104,8 +104,8 @@ const addButtonListener = () => {
         settingsContainer.classList.add("show");
       }
 
-      resetBtnBorder();
-      const btn = event.currentTarget;
+      resetBtnBorder(clickedItem);
+      const btn = clickedItem.currentTarget;
       setBtnBorder(btn);
     });
   }
