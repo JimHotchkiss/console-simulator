@@ -152,15 +152,17 @@
 .powerBtn-div {
   width: 200px;
   height: 90px;
-  margin: auto;
+  margin-left: 100px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   background: #424242;
 }
 
 .powerBtn-img {
   width: 40px;
   height: 40px;
-
-  margin: 20px auto;
+  margin: 25px auto;
   background: transparent url("/assets/img/power-button.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
@@ -168,13 +170,39 @@
 }
 
 .autlight-div {
-  width: 40px;
-  height: 40px;
+  display: flex;
+  flex-direction: column;
+}
 
+.autolight-img {
+  width: 35px;
+  height: 35px;
+  margin-left: 60px;
+  margin-top: 14px;
   background: transparent url("/assets/img/lightbulb-icon.png") 0% 0% no-repeat
     padding-box;
-  opacity: 1;
-  background-size: 40px;
+  opacity: 0.4;
+  background-size: 30px;
+}
+
+.autolight-title {
+  max-width: 50px;
+  margin-left: auto;
+}
+
+.autolight-title p {
+  margin: 0;
+  padding: 0;
+}
+
+.autolight-text {
+  font-family: roboto;
+  font-size: 10px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 20px;
+  color: #fff;
+  opacity: 0.4;
 }
 
 .intensity-div {
