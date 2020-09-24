@@ -13,8 +13,19 @@ const handlePowerButton = () => {
   const powerButton = document.getElementById("power-button");
   powerButton.addEventListener("click", () => {
     testIris();
+    testLightToggle();
     powerButton.classList.toggle("on");
   });
+};
+
+const testLightToggle = () => {
+  const lightcableDiv = document.getElementById("lightcord-div");
+  lightcableDiv.classList.toggle("light-on");
+  const lightcableImg = document.getElementById("lightcord-img");
+  lightcableImg.classList.toggle("light-on-img");
+  const powerBtnDiv = document.getElementById("powerBtn-div");
+  console.log(powerBtnDiv);
+  powerBtnDiv.classList.toggle("powerBtn-on");
 };
 
 const testIris = () => {
