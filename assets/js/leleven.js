@@ -11,10 +11,13 @@ const setHomeIconSelected = () => {
 
 const handlePowerButton = () => {
   const powerButton = document.getElementById("power-button");
+  const uiContainer = document.getElementById("ui-container");
   powerButton.addEventListener("click", () => {
-    testIris();
-    testLightToggle();
+    // testIris();
+    // testLightToggle();
+
     powerButton.classList.toggle("on");
+    uiContainer.classList.toggle("power-on");
   });
 };
 
