@@ -10,7 +10,6 @@ const handleLightSourceToggle = () => {
   const powerBtn = document.getElementById("powerBtn-div");
   powerBtn.addEventListener("click", () => {
     if (checkLightCordPlug() === true) {
-      console.log(checkLightCordPlug());
       powerBtn.classList.toggle("powerBtn-div-on");
     } else {
       console.log(checkLightCordPlug());
