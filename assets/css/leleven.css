@@ -8,7 +8,16 @@
   background: #000;
   border-radius: 30px;
   border: 6px solid rgba(255, 255, 255, 0.7);
-  margin: auto;
+  margin-top: 75px;
+  margin-left: 15px;
+}
+
+.lightcable-div {
+  display: none;
+}
+
+.lightcable-div.show {
+  display: flex;
 }
 
 .iris-power-button-container {
@@ -164,6 +173,11 @@
   background: #424242;
   opacity: 0.2;
   cursor: pointer;
+}
+
+.powerBtn-div.powerBtn-div-on {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #0da9ff;
 }
 
 .powerBtn-div.powerBtn-on {
@@ -418,13 +432,17 @@
   background-size: 150px;
 }
 
+.lightcable-div {
+  margin-top: 24px;
+  margin-left: 875px;
+  cursor: pointer;
+}
+
 .lightcable-img {
-  width: 150px;
-  height: 150px;
-  margin-top: 590px;
-  margin-right: 800px;
+  width: 200px;
+  height: 200px;
   background: transparent url("/assets/img/aim-safelight.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
-  background-size: 150px;
+  background-size: 200px;
 }

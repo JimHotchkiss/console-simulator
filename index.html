@@ -382,72 +382,77 @@
         </div>
         <!-- End Crossfire Simulator-->
         <!-- L11 Simulator Start-->
-        <div id="l11-console" class="l11-container">
-          <div class="iris-power-button-container">
-            <div class="iris-div">
-              <div class="iris-inner-div">
-                <div class="iris-plug-div"></div>
-                <div class="laser-icon-div"></div>
-                <div class="iris-plug-div"></div>
+        <div id="l11-screen-body" class="l11-screen-body">
+          <div id="l11-console" class="l11-container">
+            <div class="iris-power-button-container">
+              <div class="iris-div">
+                <div class="iris-inner-div">
+                  <div class="iris-plug-div"></div>
+                  <div class="laser-icon-div"></div>
+                  <div class="iris-plug-div"></div>
+                </div>
+              </div>
+              <div id="power-button" class="power-button-div"></div>
+            </div>
+            <div class="l11-gui">
+              <div id="ui-container" class="ui-container">
+                <div class="control-column-div">
+                  <div id="l11-home-btn" class="l11-nav-button">
+                    <div class="home-l11-icon"></div>
+                  </div>
+                  <div id="l11-iris-btn" class="l11-nav-button">
+                    <div class="iris-icon">IRIS</div>
+                  </div>
+                  <div id="l11-setting-btn" class="l11-nav-button">
+                    <div class="gear-l11-icon"></div>
+                  </div>
+                </div>
+                <div class="power-display-div">
+                  <div class="power-autolight-div">
+                    <div id="powerBtn-div" class="powerBtn-div">
+                      <div class="powerBtn-img"></div>
+                    </div>
+                    <div class="autlight-div">
+                      <div class="autolight-img"></div>
+                      <div class="autolight-title">
+                        <p class="autolight-text">Auto Light</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="intensity-container">
+                    <div class="intensity-title-div">
+                      <p class="intensity-text">Intensity Level</p>
+                    </div>
+                    <div class="intensity-carousel-div">
+                      <div class="l11-minus-div">
+                        <div class="l11-minus-img"></div>
+                      </div>
+                      <div class="intensity-value-div">40</div>
+                      <div class="l11-plus-div">
+                        <div class="l11-plus-img"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spy-mode-container">
+                    <div class="spy-mode-title">SPY Mode</div>
+                    <div class="spy-mode-div">ENV</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div id="power-button" class="power-button-div"></div>
+            <!-- light cord plug-->
+            <div class="lightcord-container">
+              <div class="lightcord-title">LIGHT CABLE</div>
+              <div id="lightcord-div" class="lightcord-div">
+                <div id="lightcord-img" class="lightcord-img"></div>
+              </div>
+            </div>
           </div>
-          <div class="l11-gui">
-            <div id="ui-container" class="ui-container">
-              <div class="control-column-div">
-                <div id="l11-home-btn" class="l11-nav-button">
-                  <div class="home-l11-icon"></div>
-                </div>
-                <div id="l11-iris-btn" class="l11-nav-button">
-                  <div class="iris-icon">IRIS</div>
-                </div>
-                <div id="l11-setting-btn" class="l11-nav-button">
-                  <div class="gear-l11-icon"></div>
-                </div>
-              </div>
-              <div class="power-display-div">
-                <div class="power-autolight-div">
-                  <div id="powerBtn-div" class="powerBtn-div">
-                    <div class="powerBtn-img"></div>
-                  </div>
-                  <div class="autlight-div">
-                    <div class="autolight-img"></div>
-                    <div class="autolight-title">
-                      <p class="autolight-text">Auto Light</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="intensity-container">
-                  <div class="intensity-title-div">
-                    <p class="intensity-text">Intensity Level</p>
-                  </div>
-                  <div class="intensity-carousel-div">
-                    <div class="l11-minus-div">
-                      <div class="l11-minus-img"></div>
-                    </div>
-                    <div class="intensity-value-div">40</div>
-                    <div class="l11-plus-div">
-                      <div class="l11-plus-img"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="spy-mode-container">
-                  <div class="spy-mode-title">SPY Mode</div>
-                  <div class="spy-mode-div">ENV</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- light cord plug-->
-          <div class="lightcord-container">
-            <div class="lightcord-title">LIGHT CABLE</div>
-            <div id="lightcord-div" class="lightcord-div">
-              <div id="lightcord-img" class="lightcord-img"></div>
-            </div>
+          <div id="lightcable-div" class="lightcable-div">
+            <div class="lightcable-img"></div>
           </div>
         </div>
-        <div class="lightcable-div"><div class="lightcable-img"></div></div>
+        <!-- End L11-->
       </div>
     </div>
   </body>
