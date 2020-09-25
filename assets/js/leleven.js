@@ -7,10 +7,10 @@ window.addEventListener("load", (event) => {
 });
 
 const handleLightSourceToggle = () => {
-  const powerBtn = document.getElementById("powerBtn-div");
-  powerBtn.addEventListener("click", () => {
+  const lsToggle = document.getElementById("ls-toggle-div");
+  lsToggle.addEventListener("click", () => {
     if (checkLightCordPlug() === true) {
-      powerBtn.classList.toggle("powerBtn-div-on");
+      lightToggle();
     } else {
       console.log(checkLightCordPlug());
       alert("Remeber to connect a lightcable");
@@ -20,24 +20,38 @@ const handleLightSourceToggle = () => {
 
 const checkLightCordPlug = () => {
   const lightcordDiv = document.getElementById("lightcord-div");
-  if (lightcordDiv.classList.value === "lightcord-div light-on") return true;
+  if (lightcordDiv.classList.value === "lightcord-div light-on") {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const checkLsToggle = () => {
+  const lsToggleDiv = document.getElementById("ls-toggle-div");
+  if (lsToggleDiv.classList.value === "ls-toggle-div ls-toggle-div-on") {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const handleLightCable = () => {
   const powerBtn = document.getElementById("power-button");
-
+  const lightcableDiv = document.getElementById("lightcord-div");
   const lightCableDiv = document.getElementById("lightcable-div");
+  const lsToggleDiv = document.getElementById("ls-toggle-div");
   lightCableDiv.addEventListener("click", () => {
-    console.log(powerBtn.classList.value);
     if (powerBtn.classList.value !== "power-button-div on") {
       console.log(powerBtn.classList.value);
       alert("Be sure to power on the L11!");
-    } else {
-      const lightcableDiv = document.getElementById("lightcord-div");
+    } else if (
+      lsToggleDiv.classList.value === "ls-toggle-div ls-toggle-div-on"
+    ) {
       lightcableDiv.classList.toggle("light-on");
-      const lightcableImg = document.getElementById("lightcord-img");
-      lightcableImg.classList.toggle("light-on-img");
       lightToggle();
+    } else {
+      lightcableDiv.classList.toggle("light-on");
     }
   });
 };
@@ -48,14 +62,13 @@ const setHomeIconSelected = () => {
 };
 
 const handlePowerButton = () => {
-  const powerBtnDiv = document.getElementById("powerBtn-div");
   const lightcablediv = document.getElementById("lightcord-div");
   const powerButton = document.getElementById("power-button");
   const uiContainer = document.getElementById("ui-container");
   powerButton.addEventListener("click", () => {
-    if (lightcablediv.classList.value === "lightcord-div light-on") {
+    if (checkLightCordPlug() && checkLsToggle()) {
+      lightToggle();
       lightcablediv.classList.toggle("light-on");
-      powerBtnDiv.classList.toggle("powerBtn-on");
     }
     powerButton.classList.toggle("on");
     uiContainer.classList.toggle("power-on");
@@ -63,8 +76,9 @@ const handlePowerButton = () => {
 };
 
 const lightToggle = () => {
-  const powerBtnDiv = document.getElementById("powerBtn-div");
-  powerBtnDiv.classList.toggle("powerBtn-on");
+  const lsToggleDiv = document.getElementById("ls-toggle-div");
+  console.log(lsToggleDiv);
+  lsToggleDiv.classList.toggle("ls-toggle-div-on");
 };
 
 const testIris = () => {
