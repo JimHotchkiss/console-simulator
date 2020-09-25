@@ -75,13 +75,29 @@
             </div>
           </div>
         </div>
+        <!-- Modal-->
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div id="modal-title" class="modal-title"></div>
+            <button id="modal-close" class="close-modal">&times;</button>
+          </div>
+          <div id="modal-body" class="modal-body">
+            <!-- <h3 id="modal-title-text"></h3>
+            <h3 id="modal-pn-text" class="modal-pn-text"></h3> -->
+            <div id="modal-body-description" class="modal-body-description">
+              <!-- <p id="modal-body-description-text"></p> -->
+            </div>
+          </div>
+        </div>
+        <div id="modal-overlay"></div>
+        <!-- End Modal -->
         <!-- 1688 Simulator-->
 
         <div id="1688-console" class="simulator">
           <!-- <div class="sixteen-title-div">
             <h3 class="sixteen-title-text">1688</h3>
           </div> -->
-          <div class="modal" id="modal">
+          <!-- <div class="modal" id="modal">
             <div class="modal-header">
               <div id="modal-title" class="modal-title"></div>
               <button id="modal-close" class="close-modal">&times;</button>
@@ -94,7 +110,7 @@
               </div>
             </div>
           </div>
-          <div id="modal-overlay"></div>
+          <div id="modal-overlay"></div> -->
           <!-- End Modal -->
           <div class="display-screen">
             <div id="navigation-container">
@@ -375,7 +391,13 @@
             </div>
           </div>
           <div class="fs-handpieces-div">
-            <div class="ftswitch-div"><div class="ftswitch-img"></div></div>
+            <div
+              data-modal="crsfr-ftswitch"
+              id="ftswitch-div"
+              class="ftswitch-div"
+            >
+              <div class="ftswitch-img"></div>
+            </div>
             <div class="shaver-div"><div class="shaver-img"></div></div>
             <div class="rf-div"><div class="rf-img"></div></div>
           </div>

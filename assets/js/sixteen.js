@@ -4,6 +4,7 @@ window.addEventListener("load", (event) => {
   document.getElementById("home-nav-button").className = "nav-buttons-clicked";
   openModalListener();
   closeModalListener();
+  closeModalWithOverlayListener();
 });
 
 const modalText = [
@@ -19,6 +20,12 @@ const modalText = [
     body:
       "Autolight automatically adjust light settings on the light source to meet optimal light output",
   },
+  {
+    id: "crsfr-ftswitch",
+    title: "Crossfire2 Foot Switch",
+    body:
+      "Footswitch Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  },
 ];
 
 const openModalListener = () => {
@@ -27,6 +34,7 @@ const openModalListener = () => {
 
   dataSelect.forEach((dataModal) => {
     dataModal.addEventListener("click", () => {
+      console.log(dataModal.dataset.modal);
       const modalSubject = dataModal.dataset.modal;
       loadModalBodyText(modalSubject);
       openModal(modal);
@@ -36,17 +44,16 @@ const openModalListener = () => {
 
 const loadModalBodyText = (modalSubject) => {
   const modalBody = document.getElementById("modal-body");
-  const modalTitleText = document.getElementById("modal-title-text");
   const modalTitle = document.getElementById("modal-title");
-  const modalPnText = document.getElementById("modal-pn-text");
-  const modalBodyText = document.getElementById("modal-body-description-text");
   modalText.map((obj) => {
+    // if (obj.id === "crsfr-ftswitch" && dataModal === "crsfr-ftswitch") {
+    //   console.log(obj.body);
+    //   showCrsFrTextModal(obj);
+    // } else
+
     if (modalSubject === obj.id) {
       modalTitle.innerText = obj.title;
       modalBody.innerText = obj.body;
-      // modalTitleText.innerText = obj.body.title + " : ";
-      // modalPnText.innerText = obj.body.pn;
-      // modalBodyText.innerText = obj.body.description;
     }
   });
 };
@@ -54,6 +61,14 @@ const loadModalBodyText = (modalSubject) => {
 const closeModalListener = () => {
   const modalCloseBtn = document.getElementById("modal-close");
   modalCloseBtn.addEventListener("click", () => {
+    const modal = document.getElementById("modal");
+    closeModal(modal);
+  });
+};
+
+const closeModalWithOverlayListener = () => {
+  const overLay = document.getElementById("modal-overlay");
+  overLay.addEventListener("click", () => {
     const modal = document.getElementById("modal");
     closeModal(modal);
   });

@@ -1,5 +1,5 @@
 window.addEventListener("load", (event) => {
-  // handpieceEventListener();
+  handleFootPedal();
 });
 
 const shavers = [
@@ -111,14 +111,29 @@ const shavers = [
   { name: "5.5mm XFX TOMCAT" },
 ];
 
-// const handpieceEventListener = () => {
-//   const handpiece = document.getElementById("shaver");
-//   handpiece.addEventListener("click", () => {
-//     const shaverTitle = document.getElementById("shaver-title-text");
-//     shaverTitle.innerText = shavers[0].name;
-//     listShavers();
-//   });
-// };
+// constants
+
+const handleFootPedal = () => {
+  const footPedal = document.getElementById("ftswitch-div");
+  footPedal.addEventListener("click", () => {
+    openModalListener();
+  });
+};
+
+const showCrsFrTextModal = (obj) => {
+  console.log(obj);
+  const modalTitle = document.getElementById("modal-title");
+  const modalBodyDescription = document.getElementById(
+    "modal-body-description"
+  );
+  const ftSwitchImg = document.createElement("div");
+  ftSwitchImg.setAttribute("class", "modal-ftstch-img-div");
+
+  modalBodyDescription.appendChild(ftSwitchImg);
+  modalTitle.innerText = obj.title;
+  modalBodyDescription.innerText = obj.body;
+  modalBodyDescription.appendChild(ftSwitchImg);
+};
 
 // const listShavers = () => {
 //   for (let item of shavers) {

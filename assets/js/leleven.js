@@ -12,7 +12,6 @@ const handleLightSourceToggle = () => {
     if (checkLightCordPlug() === true) {
       lightToggle();
     } else {
-      console.log(checkLightCordPlug());
       alert("Remeber to connect a lightcable");
     }
   });
