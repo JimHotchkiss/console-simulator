@@ -443,7 +443,7 @@
 /* Insert Select Styling */
 /* The container must be positioned relative: */
 .custom-select {
-  /* position: relative; */
+  position: relative;
   font-family: Arial;
 }
 
