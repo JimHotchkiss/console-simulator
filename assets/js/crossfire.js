@@ -1,5 +1,6 @@
 window.addEventListener("load", (event) => {
   handleFootPedal();
+  handleShaveInsertSelect();
 });
 
 const shavers = [
@@ -135,8 +136,15 @@ const showCrsFrTextModal = (obj) => {
   modalBodyDescription.appendChild(ftSwitchImg);
 };
 
-// const listShavers = () => {
-//   for (let item of shavers) {
-//     console.log(item.name);
-//   }
-// };
+const handleShaveInsertSelect = () => {
+  const selectElement = document.querySelector("#standard-select");
+  selectElement.addEventListener("change", (elementSelected) => {
+    selectedShaver = elementSelected.currentTarget.value;
+    updateShaverWindow(selectedShaver);
+  });
+};
+
+const updateShaverWindow = (selectedShaver) => {
+  const shaverTitle = document.getElementById("shaver-readout-title");
+  shaverTitle.innerText = selectedShaver;
+};
