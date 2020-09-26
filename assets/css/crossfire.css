@@ -172,13 +172,46 @@
   background: #18478e;
 }
 
-.shaver-text-div {
+.shaver-lcd-div {
+  display: flex;
   width: 420px;
   height: 124px;
   margin-top: 6px;
   margin-left: 4px;
   border-radius: 8px;
   background: #18478e;
+}
+
+.rpm-hc-div {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  width: 100px;
+  background: lightblue;
+}
+
+.rpm-div {
+  height: 70px;
+  width: 100px;
+  background: transparent;
+}
+
+.hc-div {
+  height: 70px;
+  width: 50px;
+  background: red;
+}
+
+.control-opt-direction-div {
+  height: 70px;
+  width: 100px;
+  background: lightgray;
+}
+
+.footpedal-direction-div {
+  height: 70px;
+  width: 100px;
+  background: lightgreen;
 }
 
 .adjust-selector-div {
