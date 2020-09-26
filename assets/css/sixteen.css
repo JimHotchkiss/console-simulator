@@ -588,6 +588,12 @@ html {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.modal.crossfire-active {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #18478e;
+  border: 3px solid #fff;
+}
+
 .modal-body {
   display: flex;
 }
@@ -644,6 +650,12 @@ html {
 }
 
 #modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 2;
+}
+
+#modal-overlay.crossfire-active {
   opacity: 1;
   pointer-events: all;
   z-index: 2;

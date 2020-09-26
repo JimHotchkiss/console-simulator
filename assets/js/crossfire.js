@@ -2166,8 +2166,33 @@ const updateShaverRpm = (selectedShaver) => {
 const handleShaverInsertInformation = () => {
   const shaverReadoutTitle = document.getElementById("shaver-readout-title");
   shaverReadoutTitle.addEventListener("click", () => {
-    const modalSubject = shaverReadoutTitle.innerText;
-    loadModalBodyText(modalSubject);
-    openModal();
+    const overLay = document.getElementById("modal-overlay");
+    const modal = document.getElementById("modal");
+    const modalBody = document.getElementById("modal-body");
+    modalBody.innerText = "";
+    const modalTitle = document.getElementById("modal-title");
+    console.log(shaverReadoutTitle.innerHTML);
+
+    for (let shaver of shavers) {
+      const paramArray = Object.keys(shaver);
+      console.log(paramArray);
+      if (shaver.name === shaverReadoutTitle.innerHTML) {
+        modalTitle.innerText = shaver.name;
+        const pnDiv = document.createElement("div");
+        pnDiv.setAttribute("class", paramArray[1] + "-div");
+        const pnTitle = document.createElement("h3");
+        pnTitle.setAttribute("class", "pn-title");
+        pnTitle.innerText = "Part Number:";
+        const pnText = document.createElement("p");
+        pnTitle.setAttribute("class", "pn-text");
+        pnText.innerText = shaver.pn;
+        pnDiv.appendChild(pnTitle);
+        pnDiv.appendChild(pnText);
+        modalBody.appendChild(pnDiv);
+      }
+    }
+
+    modal.classList.add("crossfire-active");
+    overLay.classList.add("crossfire-active");
   });
 };

@@ -652,3 +652,16 @@ label {
   font-weight: 400;
   color: #01225d;
 }
+
+.pn-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pn-title {
+  padding-right: 20px;
+}
+
+.pn-text {
+  padding: 0;
+}

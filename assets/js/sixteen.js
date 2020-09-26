@@ -43,15 +43,10 @@ const openModalListener = () => {
 };
 
 const loadModalBodyText = (modalSubject) => {
-  console.log(modalSubject);
+  console.log("loadModalBodyText", modalSubject);
   const modalBody = document.getElementById("modal-body");
   const modalTitle = document.getElementById("modal-title");
   modalText.map((obj) => {
-    // if (obj.id === "crsfr-ftswitch" && dataModal === "crsfr-ftswitch") {
-    //   console.log(obj.body);
-    //   showCrsFrTextModal(obj);
-    // } else
-
     if (modalSubject === obj.id) {
       modalTitle.innerText = obj.title;
       modalBody.innerText = obj.body;
@@ -78,16 +73,21 @@ const closeModalWithOverlayListener = () => {
 const openModal = () => {
   const overLay = document.getElementById("modal-overlay");
   const modal = document.getElementById("modal");
-  if (modal == null) return;
+
   modal.classList.add("active");
   overLay.classList.add("active");
 };
 
 const closeModal = (modal) => {
   const overLay = document.getElementById("modal-overlay");
-  if (modal == null) return;
-  modal.classList.remove("active");
-  overLay.classList.remove("active");
+  console.log(overLay);
+  if (modal.classList.value === "modal crossfire-active") {
+    modal.classList.remove("crossfire-active");
+    overLay.classList.remove("crossfire-active");
+  } else {
+    modal.classList.remove("active");
+    overLay.classList.remove("active");
+  }
 };
 
 const addButtonListener = () => {
