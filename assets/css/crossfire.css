@@ -196,7 +196,7 @@
   padding-right: 6px;
   padding-top: 12px;
   height: 85px;
-  width: 200px
+  width: 280px;
   background: transparent;
 }
 
@@ -216,7 +216,6 @@
 .control-opt-direction-div {
   /* height: 70px; */
   width: 100px;
-
 }
 
 .footpedal-direction-div {
@@ -248,7 +247,6 @@
   margin-top: 6px;
   background-size: 65px;
 }
-
 
 .control-option-div {
   font-size: 28px;

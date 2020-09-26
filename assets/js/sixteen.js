@@ -43,6 +43,7 @@ const openModalListener = () => {
 };
 
 const loadModalBodyText = (modalSubject) => {
+  console.log(modalSubject);
   const modalBody = document.getElementById("modal-body");
   const modalTitle = document.getElementById("modal-title");
   modalText.map((obj) => {
@@ -74,8 +75,9 @@ const closeModalWithOverlayListener = () => {
   });
 };
 
-const openModal = (modal) => {
+const openModal = () => {
   const overLay = document.getElementById("modal-overlay");
+  const modal = document.getElementById("modal");
   if (modal == null) return;
   modal.classList.add("active");
   overLay.classList.add("active");
