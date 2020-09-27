@@ -2160,7 +2160,7 @@ const updateShaverRpm = (selectedShaver) => {
   ftPedalDiv.innerText = "FP";
   controlOptDiv.innerText = "VAR";
   directionDiv.innerText = "F";
-  directionImgDiv.classList.add("show");
+  directionImgDiv.classList.add("show-img");
 };
 
 const handleShaverInsertInformation = () => {
@@ -2174,7 +2174,6 @@ const handleShaverInsertInformation = () => {
     console.log(shaverReadoutTitle.innerHTML);
 
     for (let shaver of shavers) {
-      const paramArray = Object.keys(shaver);
       if (shaver.name === shaverReadoutTitle.innerHTML) {
         modalTitle.innerText = shaver.name;
         const pnDiv = document.createElement("div");
@@ -2197,7 +2196,10 @@ const handleShaverInsertInformation = () => {
         incrementTitle.setAttribute("class", "shaver-modal-title");
         incrementTitle.innerText = "Increment:";
         const incrementTextDiv = document.createElement("div");
-        incrementTextDiv.setAttribute("class", "shaver-modal-text-div");
+        incrementTextDiv.setAttribute(
+          "class",
+          "shaver-modal-increment-text-div"
+        );
         const incrementText = document.createElement("p");
         incrementText.setAttribute("class", "shaver-modal-text");
         incrementText.innerText = shaver.increment;
@@ -2289,6 +2291,132 @@ const handleShaverInsertInformation = () => {
         fwdHighMaxDiv.appendChild(fwdHighMaxTitle);
         fwdHighMaxDiv.appendChild(fwdHighMaxTextDiv);
 
+        const revLowDefaultDiv = document.createElement("div");
+        revLowDefaultDiv.setAttribute("class", "shaver-modal-div");
+        const revLowDefaultTitle = document.createElement("h3");
+        revLowDefaultTitle.setAttribute("class", "shaver-modal-title");
+        revLowDefaultTitle.innerText = "Reverse Low Default:";
+        const revLowDefaultTextDiv = document.createElement("div");
+        revLowDefaultTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const revLowDefaultText = document.createElement("p");
+        revLowDefaultText.setAttribute("class", "shaver-modal-text");
+        revLowDefaultText.innerText = shaver.rev_low_default;
+        revLowDefaultTextDiv.appendChild(revLowDefaultText);
+        revLowDefaultDiv.appendChild(revLowDefaultTitle);
+        revLowDefaultDiv.appendChild(revLowDefaultTextDiv);
+
+        const revLowMinDiv = document.createElement("div");
+        revLowMinDiv.setAttribute("class", "shaver-modal-div");
+        const revLowMinTitle = document.createElement("h3");
+        revLowMinTitle.setAttribute("class", "shaver-modal-title");
+        revLowMinTitle.innerText = "Reverse Low Min:";
+        const revLowMinTextDiv = document.createElement("div");
+        revLowMinTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const revLowMinText = document.createElement("p");
+        revLowMinText.setAttribute("class", "shaver-modal-text");
+        revLowMinText.innerText = shaver.rev_low_min;
+        revLowMinTextDiv.appendChild(revLowMinText);
+        revLowMinDiv.appendChild(revLowMinTitle);
+        revLowMinDiv.appendChild(revLowMinTextDiv);
+
+        const revLowMaxDiv = document.createElement("div");
+        revLowMaxDiv.setAttribute("class", "shaver-modal-div");
+        const revLowMaxTitle = document.createElement("h3");
+        revLowMaxTitle.setAttribute("class", "shaver-modal-title");
+        revLowMaxTitle.innerText = "Reverse Low Max:";
+        const revLowMaxTextDiv = document.createElement("div");
+        revLowMaxTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const revLowMaxText = document.createElement("p");
+        revLowMaxText.setAttribute("class", "shaver-modal-text");
+        revLowMaxText.innerText = shaver.rev_low_max;
+        revLowMaxTextDiv.appendChild(revLowMaxText);
+        revLowMaxDiv.appendChild(revLowMaxTitle);
+        revLowMaxDiv.appendChild(revLowMaxTextDiv);
+
+        const revHighDefaultDiv = document.createElement("div");
+        revHighDefaultDiv.setAttribute("class", "shaver-modal-div");
+        const revHighDefaultTitle = document.createElement("h3");
+        revHighDefaultTitle.setAttribute("class", "shaver-modal-title");
+        revHighDefaultTitle.innerText = "Reverse High Default:";
+        const revHighDefaultTextDiv = document.createElement("div");
+        revHighDefaultTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const revHighDefaultText = document.createElement("p");
+        revHighDefaultText.setAttribute("class", "shaver-modal-text");
+        revHighDefaultText.innerText = shaver.rev_high_default;
+        revHighDefaultTextDiv.appendChild(revHighDefaultText);
+        revHighDefaultDiv.appendChild(revHighDefaultTitle);
+        revHighDefaultDiv.appendChild(revHighDefaultTextDiv);
+
+        const revHighMinDiv = document.createElement("div");
+        revHighMinDiv.setAttribute("class", "shaver-modal-div");
+        const revHighMinTitle = document.createElement("h3");
+        revHighMinTitle.setAttribute("class", "shaver-modal-title");
+        revHighMinTitle.innerText = "Reverse High Min:";
+        const revHighMinTextDiv = document.createElement("div");
+        revHighMinTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const revHighMinText = document.createElement("p");
+        revHighMinText.setAttribute("class", "shaver-modal-text");
+        revHighMinText.innerText = shaver.rev_high_min;
+        revHighMinTextDiv.appendChild(revHighMinText);
+        revHighMinDiv.appendChild(revHighMinTitle);
+        revHighMinDiv.appendChild(revHighMinTextDiv);
+
+        const revHighMaxDiv = document.createElement("div");
+        revHighMaxDiv.setAttribute("class", "shaver-modal-div");
+        const revHighMaxTitle = document.createElement("h3");
+        revHighMaxTitle.setAttribute("class", "shaver-modal-title");
+        revHighMaxTitle.innerText = "Reverse High Max:";
+        const revHighMaxTextDiv = document.createElement("div");
+        revHighMaxTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const revHighMaxText = document.createElement("p");
+        revHighMaxText.setAttribute("class", "shaver-modal-text");
+        revHighMaxText.innerText = shaver.rev_high_max;
+        revHighMaxTextDiv.appendChild(revHighMaxText);
+        revHighMaxDiv.appendChild(revHighMaxTitle);
+        revHighMaxDiv.appendChild(revHighMaxTextDiv);
+
+        const oscDefaultDiv = document.createElement("div");
+        oscDefaultDiv.setAttribute("class", "shaver-modal-div");
+        const oscDefaultTitle = document.createElement("h3");
+        oscDefaultTitle.setAttribute("class", "shaver-modal-title");
+        oscDefaultTitle.innerText = "Oscillate Default:";
+        const oscDefaultTextDiv = document.createElement("div");
+        oscDefaultTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const oscDefaultText = document.createElement("p");
+        oscDefaultText.setAttribute("class", "shaver-modal-text");
+        oscDefaultText.innerText = shaver.osc_default;
+        oscDefaultTextDiv.appendChild(oscDefaultText);
+        oscDefaultDiv.appendChild(oscDefaultTitle);
+        oscDefaultDiv.appendChild(oscDefaultTextDiv);
+
+        const oscMinDiv = document.createElement("div");
+        oscMinDiv.setAttribute("class", "shaver-modal-div");
+        const oscMinTitle = document.createElement("h3");
+        oscMinTitle.setAttribute("class", "shaver-modal-title");
+        oscMinTitle.innerText = "Oscillate Min:";
+        const oscMinTextDiv = document.createElement("div");
+        oscMinTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const oscMinText = document.createElement("p");
+        oscMinText.setAttribute("class", "shaver-modal-text");
+        oscMinText.innerText = shaver.osc_min;
+        oscMinTextDiv.appendChild(oscMinText);
+        oscMinDiv.appendChild(oscMinTitle);
+        oscMinDiv.appendChild(oscMinTextDiv);
+
+        const oscMaxDiv = document.createElement("div");
+        oscMaxDiv.setAttribute("class", "shaver-modal-div");
+        const oscMaxTitle = document.createElement("h3");
+        oscMaxTitle.setAttribute("class", "shaver-modal-title");
+        oscMaxTitle.innerText = "Oscillate Max:";
+        const oscMaxTextDiv = document.createElement("div");
+        oscMaxTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const oscMaxText = document.createElement("p");
+        oscMaxText.setAttribute("class", "shaver-modal-text");
+        oscMaxText.innerText = shaver.osc_max;
+        oscMaxTextDiv.appendChild(oscMaxText);
+        oscMaxDiv.appendChild(oscMaxTitle);
+        oscMaxDiv.appendChild(oscMaxTextDiv);
+
         modalBody.appendChild(pnDiv);
         modalBody.appendChild(incrementDiv);
         modalBody.appendChild(fwdLowDefaultDiv);
@@ -2297,6 +2425,15 @@ const handleShaverInsertInformation = () => {
         modalBody.appendChild(fwdHighDefaultDiv);
         modalBody.appendChild(fwdHighMinDiv);
         modalBody.appendChild(fwdHighMaxDiv);
+        modalBody.appendChild(revLowDefaultDiv);
+        modalBody.appendChild(revLowMinDiv);
+        modalBody.appendChild(revLowMaxDiv);
+        modalBody.appendChild(revHighDefaultDiv);
+        modalBody.appendChild(revHighMinDiv);
+        modalBody.appendChild(revHighMaxDiv);
+        modalBody.appendChild(oscDefaultDiv);
+        modalBody.appendChild(oscMinDiv);
+        modalBody.appendChild(oscMaxDiv);
       }
     }
 

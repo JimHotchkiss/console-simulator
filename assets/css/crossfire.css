@@ -236,7 +236,7 @@
   width: auto;
 }
 
-.direction-img-div.show {
+.direction-img-div.show-img {
   cursor: pointer;
   width: 80px;
   height: 90px;
@@ -541,7 +541,7 @@
 /* } */
 
 .select-selected {
-  background-color: DodgerBlue;
+  background-color: #18478e;
 }
 
 /* Style the arrow inside the select element: */
@@ -661,6 +661,16 @@ label {
 .shaver-modal-text-div {
   width: auto;
   height: 30px;
+}
+
+.shaver-modal-increment-text-div {
+  width: 300px;
+  height: 30px;
+}
+
+.shaver-modal-increment-text-div p {
+  padding-top: 3px;
+  padding-left: 8px;
 }
 .shaver-modal-text-div p {
   padding-top: 3px;
