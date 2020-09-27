@@ -9,13 +9,13 @@ const selectConsoleListener = () => {
       if (item.id === "l11") {
         const lightCableDiv = document.getElementById("lightcable-div");
         resetDisplayConsole();
-        lightCableDiv.classList.add("show");
+        lightCableDiv.classList.add("show-lightcable");
         const currentConsole = document.getElementById(item.id + "-console");
-        currentConsole.classList.add("show");
+        currentConsole.classList.add("show-console");
       } else {
         const currentConsole = document.getElementById(item.id + "-console");
         resetDisplayConsole();
-        currentConsole.classList.add("show");
+        currentConsole.classList.add("show-console");
       }
     });
   }
@@ -23,11 +23,12 @@ const selectConsoleListener = () => {
 
 const resetDisplayConsole = () => {
   const lightCableDiv = document.getElementById("lightcable-div");
-  lightCableDiv.classList.remove("show");
-  const show = document.getElementsByClassName("show");
+  lightCableDiv.classList.remove("show-lightcable");
+  const show = document.getElementsByClassName("show-console");
+  console.log(show);
   if (show.length > 0) {
     for (let item of show) {
-      item.classList.remove("show");
+      item.classList.remove("show-console");
     }
   }
 };

@@ -1,7 +1,7 @@
 .crossfire-container {
   display: none;
 }
-.crossfire-container.show {
+.crossfire-container.show-console {
   display: flex;
   flex-direction: column;
   width: 1175px;

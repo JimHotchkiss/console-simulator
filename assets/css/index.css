@@ -96,7 +96,7 @@ html {
   display: none;
 }
 
-.simulator.show {
+.simulator.show-console {
   display: flex;
   flex-direction: column;
   margin: auto;

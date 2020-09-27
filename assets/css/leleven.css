@@ -1,7 +1,7 @@
 .l11-container {
   display: none;
 }
-.l11-container.show {
+.l11-container.show-console {
   display: flex;
   width: 1180px;
   height: 409px;
@@ -16,7 +16,7 @@
   display: none;
 }
 
-.lightcable-div.show {
+.lightcable-div.show-lightcable {
   display: flex;
 }
 
