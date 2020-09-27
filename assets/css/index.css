@@ -92,6 +92,10 @@ html {
   background: #f7f7f7;
 }
 
+.consoles-div.consoles-hide {
+  display: none;
+}
+
 .simulator {
   display: none;
 }

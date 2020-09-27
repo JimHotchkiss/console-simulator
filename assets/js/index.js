@@ -4,6 +4,7 @@ window.addEventListener("load", (event) => {
 
 const selectConsoleListener = () => {
   const consoles = document.getElementsByClassName("console");
+  const consolesDiv = document.getElementById("consoles-div");
   for (let item of consoles) {
     item.addEventListener("click", () => {
       if (item.id === "l11") {
@@ -12,10 +13,12 @@ const selectConsoleListener = () => {
         lightCableDiv.classList.add("show-lightcable");
         const currentConsole = document.getElementById(item.id + "-console");
         currentConsole.classList.add("show-console");
+        // consolesDiv.classList.add("consoles-hide");
       } else {
         const currentConsole = document.getElementById(item.id + "-console");
         resetDisplayConsole();
         currentConsole.classList.add("show-console");
+        // consolesDiv.classList.add("consoles-hide");
       }
     });
   }
