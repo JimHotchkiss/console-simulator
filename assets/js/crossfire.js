@@ -2175,20 +2175,128 @@ const handleShaverInsertInformation = () => {
 
     for (let shaver of shavers) {
       const paramArray = Object.keys(shaver);
-      console.log(paramArray);
       if (shaver.name === shaverReadoutTitle.innerHTML) {
         modalTitle.innerText = shaver.name;
         const pnDiv = document.createElement("div");
-        pnDiv.setAttribute("class", paramArray[1] + "-div");
+        pnDiv.setAttribute("class", "shaver-modal-div");
         const pnTitle = document.createElement("h3");
-        pnTitle.setAttribute("class", "pn-title");
+        pnTitle.setAttribute("class", "shaver-modal-title");
         pnTitle.innerText = "Part Number:";
+        const pnTextDiv = document.createElement("div");
+        pnTextDiv.setAttribute("class", "shaver-modal-text-div");
         const pnText = document.createElement("p");
-        pnTitle.setAttribute("class", "pn-text");
+        pnTitle.setAttribute("class", "shaver-modal-text");
         pnText.innerText = shaver.pn;
+        pnTextDiv.appendChild(pnText);
         pnDiv.appendChild(pnTitle);
-        pnDiv.appendChild(pnText);
+        pnDiv.appendChild(pnTextDiv);
+
+        const incrementDiv = document.createElement("div");
+        incrementDiv.setAttribute("class", "shaver-modal-div");
+        const incrementTitle = document.createElement("h3");
+        incrementTitle.setAttribute("class", "shaver-modal-title");
+        incrementTitle.innerText = "Increment:";
+        const incrementTextDiv = document.createElement("div");
+        incrementTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const incrementText = document.createElement("p");
+        incrementText.setAttribute("class", "shaver-modal-text");
+        incrementText.innerText = shaver.increment;
+        incrementTextDiv.appendChild(incrementText);
+        incrementDiv.appendChild(incrementTitle);
+        incrementDiv.appendChild(incrementTextDiv);
+
+        const fwdLowDefaultDiv = document.createElement("div");
+        fwdLowDefaultDiv.setAttribute("class", "shaver-modal-div");
+        const fwdLowDefaultTitle = document.createElement("h3");
+        fwdLowDefaultTitle.setAttribute("class", "shaver-modal-title");
+        fwdLowDefaultTitle.innerText = "Foward Low Default:";
+        const fwdLowDefaultTextDiv = document.createElement("div");
+        fwdLowDefaultTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const fwdLowDefaultText = document.createElement("p");
+        fwdLowDefaultText.setAttribute("class", "shaver-modal-text");
+        fwdLowDefaultText.innerText = shaver.fwd_low_default;
+        fwdLowDefaultTextDiv.appendChild(fwdLowDefaultText);
+        fwdLowDefaultDiv.appendChild(fwdLowDefaultTitle);
+        fwdLowDefaultDiv.appendChild(fwdLowDefaultTextDiv);
+
+        const fwdLowMinDiv = document.createElement("div");
+        fwdLowMinDiv.setAttribute("class", "shaver-modal-div");
+        const fwdLowMinTitle = document.createElement("h3");
+        fwdLowMinTitle.setAttribute("class", "shaver-modal-title");
+        fwdLowMinTitle.innerText = "Foward Low Min:";
+        const fwdLowMinTextDiv = document.createElement("div");
+        fwdLowMinTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const fwdLowMinText = document.createElement("p");
+        fwdLowMinText.setAttribute("class", "shaver-modal-text");
+        fwdLowMinText.innerText = shaver.fwd_low_min;
+        fwdLowMinTextDiv.appendChild(fwdLowMinText);
+        fwdLowMinDiv.appendChild(fwdLowMinTitle);
+        fwdLowMinDiv.appendChild(fwdLowMinTextDiv);
+
+        const fwdLowMaxDiv = document.createElement("div");
+        fwdLowMaxDiv.setAttribute("class", "shaver-modal-div");
+        const fwdLowMaxTitle = document.createElement("h3");
+        fwdLowMaxTitle.setAttribute("class", "shaver-modal-title");
+        fwdLowMaxTitle.innerText = "Foward Low Max:";
+        const fwdLowMaxTextDiv = document.createElement("div");
+        fwdLowMaxTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const fwdLowMaxText = document.createElement("p");
+        fwdLowMaxText.setAttribute("class", "shaver-modal-text");
+        fwdLowMaxText.innerText = shaver.fwd_low_max;
+        fwdLowMaxTextDiv.appendChild(fwdLowMaxText);
+        fwdLowMaxDiv.appendChild(fwdLowMaxTitle);
+        fwdLowMaxDiv.appendChild(fwdLowMaxTextDiv);
+
+        const fwdHighDefaultDiv = document.createElement("div");
+        fwdHighDefaultDiv.setAttribute("class", "shaver-modal-div");
+        const fwdHighDefaultTitle = document.createElement("h3");
+        fwdHighDefaultTitle.setAttribute("class", "shaver-modal-title");
+        fwdHighDefaultTitle.innerText = "Foward High Default:";
+        const fwdHighDefaultTextDiv = document.createElement("div");
+        fwdHighDefaultTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const fwdHighDefaultText = document.createElement("p");
+        fwdHighDefaultText.setAttribute("class", "shaver-modal-text");
+        fwdHighDefaultText.innerText = shaver.fwd_high_default;
+        fwdHighDefaultTextDiv.appendChild(fwdHighDefaultText);
+        fwdHighDefaultDiv.appendChild(fwdHighDefaultTitle);
+        fwdHighDefaultDiv.appendChild(fwdHighDefaultTextDiv);
+
+        const fwdHighMinDiv = document.createElement("div");
+        fwdHighMinDiv.setAttribute("class", "shaver-modal-div");
+        const fwdHighMinTitle = document.createElement("h3");
+        fwdHighMinTitle.setAttribute("class", "shaver-modal-title");
+        fwdHighMinTitle.innerText = "Foward High Min:";
+        const fwdHighMinTextDiv = document.createElement("div");
+        fwdHighMinTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const fwdHighMinText = document.createElement("p");
+        fwdHighMinText.setAttribute("class", "shaver-modal-text");
+        fwdHighMinText.innerText = shaver.fwd_high_min;
+        fwdHighMinTextDiv.appendChild(fwdHighMinText);
+        fwdHighMinDiv.appendChild(fwdHighMinTitle);
+        fwdHighMinDiv.appendChild(fwdHighMinTextDiv);
+
+        const fwdHighMaxDiv = document.createElement("div");
+        fwdHighMaxDiv.setAttribute("class", "shaver-modal-div");
+        const fwdHighMaxTitle = document.createElement("h3");
+        fwdHighMaxTitle.setAttribute("class", "shaver-modal-title");
+        fwdHighMaxTitle.innerText = "Foward High Max:";
+        const fwdHighMaxTextDiv = document.createElement("div");
+        fwdHighMaxTextDiv.setAttribute("class", "shaver-modal-text-div");
+        const fwdHighMaxText = document.createElement("p");
+        fwdHighMaxText.setAttribute("class", "shaver-modal-text");
+        fwdHighMaxText.innerText = shaver.fwd_high_max;
+        fwdHighMaxTextDiv.appendChild(fwdHighMaxText);
+        fwdHighMaxDiv.appendChild(fwdHighMaxTitle);
+        fwdHighMaxDiv.appendChild(fwdHighMaxTextDiv);
+
         modalBody.appendChild(pnDiv);
+        modalBody.appendChild(incrementDiv);
+        modalBody.appendChild(fwdLowDefaultDiv);
+        modalBody.appendChild(fwdLowMinDiv);
+        modalBody.appendChild(fwdLowMaxDiv);
+        modalBody.appendChild(fwdHighDefaultDiv);
+        modalBody.appendChild(fwdHighMinDiv);
+        modalBody.appendChild(fwdHighMaxDiv);
       }
     }
 
