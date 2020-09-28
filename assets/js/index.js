@@ -28,7 +28,6 @@ const resetDisplayConsole = () => {
   const lightCableDiv = document.getElementById("lightcable-div");
   lightCableDiv.classList.remove("show-lightcable");
   const show = document.getElementsByClassName("show-console");
-  console.log(show);
   if (show.length > 0) {
     for (let item of show) {
       item.classList.remove("show-console");

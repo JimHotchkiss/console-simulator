@@ -596,6 +596,14 @@ html {
   max-width: 100%;
 }
 
+.modal.crossfire-errors {
+  transform: translate(-50%, -50%) scale(1);
+  background-color: #18478e;
+  border: 3px solid #fff;
+  width: 900px;
+  max-width: 100%;
+}
+
 .modal-body {
   display: flex;
   flex-wrap: wrap;
@@ -659,6 +667,12 @@ html {
 }
 
 #modal-overlay.crossfire-active {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 2;
+}
+
+#modal-overlay.crossfire-errors {
   opacity: 1;
   pointer-events: all;
   z-index: 2;

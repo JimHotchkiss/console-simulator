@@ -3,6 +3,7 @@ window.addEventListener("load", (event) => {
   handleShaveInsertSelect();
   loadShaverInserts();
   handleShaverInsertInformation();
+  handleErrorCodesListener();
 });
 
 const shavers = [
@@ -1629,6 +1630,26 @@ const errors = [
     description: "RF Board watchdog fault",
     troubleshoot: "Replace Power (RF)Board",
   },
+  {
+    error_id: "A13",
+    description: "RF Board watchdog fault",
+    troubleshoot: "Replace Power (RF)Board",
+  },
+  {
+    error_id: "A14",
+    description: "MC Board uninitialized fault",
+    troubleshoot: "Replace Motor Control Board",
+  },
+  {
+    error_id: "A15",
+    description: "MC Board power supply voltage monitor fault",
+    troubleshoot: "Replace Motor Control Board",
+  },
+  {
+    error_id: "A16",
+    description: "MC Board invalid port fault",
+    troubleshoot: "Replace Motor Control Board",
+  },
 ];
 
 const loadShaverInserts = () => {
@@ -1645,7 +1666,8 @@ const loadShaverInserts = () => {
 const handleFootPedal = () => {
   const footPedal = document.getElementById("ftswitch-div");
   footPedal.addEventListener("click", () => {
-    openModalListener();
+    const overLay = document.getElementById("modal-overlay");
+    const modal = document.getElementById("modal");
   });
 };
 
@@ -1698,6 +1720,27 @@ const updateShaverRpm = (selectedShaver) => {
   directionImgDiv.classList.add("show-img");
 };
 
+const handleErrorCodesListener = () => {
+  const overLay = document.getElementById("modal-overlay");
+  const modal = document.getElementById("modal");
+  const errorCodes = document.getElementById("error-codes");
+  errorCodes.addEventListener("click", () => {
+    const modalBody = document.getElementById("modal-body");
+    const modalTitle = document.getElementById("modal-title");
+    modalTitle.innerText = "Crossfire2 Error Codes";
+    modalBody.innerText = "";
+    modal.classList.add("crossfire-errors");
+    overLay.classList.add("crossfire-errors");
+    showErrorCodes(modal);
+  });
+};
+
+const showErrorCodes = (modal) => {
+  errors.map((error) => {
+    console.log(error);
+  });
+};
+
 const handleShaverInsertInformation = () => {
   const shaverReadoutTitle = document.getElementById("shaver-readout-title");
   shaverReadoutTitle.addEventListener("click", () => {
@@ -1706,7 +1749,6 @@ const handleShaverInsertInformation = () => {
     const modalBody = document.getElementById("modal-body");
     modalBody.innerText = "";
     const modalTitle = document.getElementById("modal-title");
-    console.log(shaverReadoutTitle.innerHTML);
 
     for (let shaver of shavers) {
       if (shaver.name === shaverReadoutTitle.innerHTML) {

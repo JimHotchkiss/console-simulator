@@ -43,7 +43,6 @@ const openModalListener = () => {
 };
 
 const loadModalBodyText = (modalSubject) => {
-  console.log("loadModalBodyText", modalSubject);
   const modalBody = document.getElementById("modal-body");
   const modalTitle = document.getElementById("modal-title");
   modalText.map((obj) => {
@@ -80,10 +79,12 @@ const openModal = () => {
 
 const closeModal = (modal) => {
   const overLay = document.getElementById("modal-overlay");
-  console.log(overLay);
   if (modal.classList.value === "modal crossfire-active") {
     modal.classList.remove("crossfire-active");
     overLay.classList.remove("crossfire-active");
+  } else if (modal.classList.value === "modal crossfire-errors") {
+    modal.classList.remove("crossfire-errors");
+    overLay.classList.remove("crossfire-errors");
   } else {
     modal.classList.remove("active");
     overLay.classList.remove("active");
