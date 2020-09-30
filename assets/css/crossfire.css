@@ -115,10 +115,18 @@
   border-radius: 8px;
 }
 
+.serfas-container-right {
+  display: none;
+}
+
 .shaver-container {
   width: 467px;
   height: 195px;
   border-radius: 8px;
+}
+
+.shaver-container-left {
+  display: none;
 }
 
 .serfas-readout-div {
