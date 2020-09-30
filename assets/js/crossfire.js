@@ -4,6 +4,8 @@ window.addEventListener("load", (event) => {
   loadShaverInserts();
   handleShaverInsertInformation();
   handleErrorCodesListener();
+  handleSerfasToggleListener();
+  handlerShaverToggleListener();
 });
 
 const shavers = [
@@ -2304,5 +2306,33 @@ const handleShaverInsertInformation = () => {
 
     modal.classList.add("crossfire-active");
     overLay.classList.add("crossfire-active");
+  });
+};
+
+const handleSerfasToggleListener = () => {
+  const rfImg = document.getElementById("rf-img");
+  const shaverContainer = document.getElementById("shaver-container");
+  const serfasContainer = document.getElementById("serfas-container");
+  const shaverLeftScreen = document.getElementById("shaver-left-screen");
+  const serfasRightScreen = document.getElementById("serfas-right-screen");
+  rfImg.addEventListener("click", () => {
+    shaverLeftScreen.classList.toggle("shaver-left-show");
+    serfasRightScreen.classList.toggle("serfas-right-show");
+    shaverContainer.classList.toggle("shaver-container-hide");
+    serfasContainer.classList.toggle("serfas-container-hide");
+  });
+};
+
+const handlerShaverToggleListener = () => {
+  const shaverContainer = document.getElementById("shaver-container");
+  const serfasContainer = document.getElementById("serfas-container");
+  const shaverLeftScreen = document.getElementById("shaver-left-screen");
+  const serfasRightScreen = document.getElementById("serfas-right-screen");
+  const shaverImg = document.getElementById("shaver-img");
+  shaverImg.addEventListener("click", () => {
+    shaverLeftScreen.classList.toggle("shaver-left-show");
+    serfasRightScreen.classList.toggle("serfas-right-show");
+    shaverContainer.classList.toggle("shaver-container-hide");
+    serfasContainer.classList.toggle("serfas-container-hide");
   });
 };

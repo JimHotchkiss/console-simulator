@@ -115,6 +115,10 @@
   border-radius: 8px;
 }
 
+.serfas-container-hide {
+  display: none;
+}
+
 .serfas-container-right {
   display: none;
 }
@@ -125,8 +129,20 @@
   border-radius: 8px;
 }
 
+.shaver-container-hide {
+  display: none;
+}
+
 .shaver-container-left {
   display: none;
+}
+
+.shaver-left-show {
+  display: block;
+}
+
+.serfas-right-show {
+  display: block;
 }
 
 .serfas-readout-div {
@@ -134,6 +150,16 @@
   height: 185px;
   margin-top: 6px;
   margin-left: 15px;
+  padding-top: 8px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.right-serfas-readout-div {
+  width: 211px;
+  height: 185px;
+  margin-top: 6px;
+  margin-left: 8px;
   padding-top: 8px;
   border-radius: 8px;
   background: #fff;
@@ -160,11 +186,34 @@
   text-overflow: ellipsis;
 }
 
+.left-shaver-readout-title {
+  font-size: 32px;
+  font-family: roboto;
+  color: #18478e;
+  padding-top: 12px;
+  letter-spacing: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .shaver-readout-div {
   width: 441px;
   height: 185px;
   margin-top: 6px;
   margin-left: 4px;
+  padding-top: 1px;
+  padding-left: 5px;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.left-shaver-readout-div {
+  width: 441px;
+  height: 185px;
+  margin-top: 6px;
+  margin-left: 16px;
   padding-top: 1px;
   padding-left: 5px;
   border-radius: 8px;
