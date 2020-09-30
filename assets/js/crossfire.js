@@ -1826,14 +1826,44 @@ const handleErrorCodesListener = () => {
     modalBody.innerText = "";
     modal.classList.add("crossfire-errors");
     overLay.classList.add("crossfire-errors");
-    showErrorCodes(modal);
+    showErrorCodes(modalBody);
   });
 };
 
 const showErrorCodes = (modal) => {
-  errors.map((error) => {
-    console.log(error);
+  const modalBody = document.getElementById("modal-body");
+  const errorADiv = document.createElement("div");
+  errorADiv.setAttribute("class", "error-div");
+  const errorTitleDiv = document.createElement("div");
+  errorTitleDiv.setAttribute("class", "error-title-div");
+  errorTitleDiv.innerText = "Category A - Activation Errors";
+  const errorDetailsDiv = document.createElement("div");
+  errorDetailsDiv.setAttribute("class", "error-details-div");
+  console.log(modalBody, modal);
+  errorsA.map((error) => {
+    const errorIdDiv = document.createElement("div");
+    errorIdDiv.setAttribute("class", "error-id-div");
+    const errorIdTitle = document.createElement("div");
+    errorIdTitle.setAttribute("class", "error-id-title");
+    errorIdTitle.innerText = "Error id:";
+    const errorIdText = document.createElement("div");
+    errorIdText.setAttribute("class", "error-id-text");
+    errorIdText.innerText = error.error_id;
+    errorIdDiv.appendChild(errorIdTitle);
+    errorIdDiv.appendChild(errorIdText);
+    errorDetailsDiv.appendChild(errorIdDiv);
+    const errorDescriptionDiv = document.createElement("div");
+    errorDescriptionDiv.setAttribute("class", "error-description-div");
+    errorDescriptionDiv.innerText = error.description;
+    errorDetailsDiv.appendChild(errorDescriptionDiv);
+    const errorTroublshootDiv = document.createElement("div");
+    errorTroublshootDiv.setAttribute("class", "error-troubleshoot-div");
+    errorTroublshootDiv.innerText = error.troubleshoot;
+    errorDetailsDiv.appendChild(errorTroublshootDiv);
   });
+  errorADiv.appendChild(errorTitleDiv);
+  errorADiv.appendChild(errorDetailsDiv);
+  modalBody.appendChild(errorADiv);
 };
 
 const handleShaverInsertInformation = () => {

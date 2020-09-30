@@ -676,3 +676,24 @@ label {
   padding-top: 3px;
   padding-left: 8px;
 }
+
+.error-title-div {
+  font-family: roboto;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.error-id-div {
+  display: flex;
+  margin-left: 16px;
+  margin-top: 16px;
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.error-id-text {
+  margin-left: 8px;
+}
