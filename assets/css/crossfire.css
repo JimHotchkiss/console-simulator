@@ -678,6 +678,7 @@ label {
 }
 
 .error-title-div {
+  margin-top: 16px;
   font-family: roboto;
   font-size: 25px;
   font-weight: 400;
@@ -695,5 +696,29 @@ label {
 }
 
 .error-id-text {
+  margin-left: 8px;
+}
+
+.error-description-div {
+  display: flex;
+}
+
+.error-description-title {
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.error-description-text {
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.error-troubleshoot-div {
+  display: flex;
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.error-troubleshoot-text {
   margin-left: 8px;
 }

@@ -1826,20 +1826,20 @@ const handleErrorCodesListener = () => {
     modalBody.innerText = "";
     modal.classList.add("crossfire-errors");
     overLay.classList.add("crossfire-errors");
-    showErrorCodes(modalBody);
+    showErrorCodes();
   });
 };
 
-const showErrorCodes = (modal) => {
+const showErrorCodes = () => {
   const modalBody = document.getElementById("modal-body");
   const errorADiv = document.createElement("div");
-  errorADiv.setAttribute("class", "error-div");
+  errorADiv.setAttribute("class", "error-modal-div");
   const errorTitleDiv = document.createElement("div");
   errorTitleDiv.setAttribute("class", "error-title-div");
   errorTitleDiv.innerText = "Category A - Activation Errors";
   const errorDetailsDiv = document.createElement("div");
   errorDetailsDiv.setAttribute("class", "error-details-div");
-  console.log(modalBody, modal);
+
   errorsA.map((error) => {
     const errorIdDiv = document.createElement("div");
     errorIdDiv.setAttribute("class", "error-id-div");
@@ -1854,16 +1854,43 @@ const showErrorCodes = (modal) => {
     errorDetailsDiv.appendChild(errorIdDiv);
     const errorDescriptionDiv = document.createElement("div");
     errorDescriptionDiv.setAttribute("class", "error-description-div");
-    errorDescriptionDiv.innerText = error.description;
+    const errorDescriptionTitle = document.createElement("div");
+    errorDescriptionTitle.setAttribute("class", "error-description-title");
+    errorDescriptionTitle.innerText = "Description:";
+    const errorDescriptionText = document.createElement("div");
+    errorDescriptionText.setAttribute("class", "error-description-text");
+    errorDescriptionTitle.innerText = "Description:";
+    errorDescriptionText.innerText = error.description;
+    errorDescriptionDiv.appendChild(errorDescriptionTitle);
+    errorDescriptionDiv.appendChild(errorDescriptionText);
     errorDetailsDiv.appendChild(errorDescriptionDiv);
     const errorTroublshootDiv = document.createElement("div");
     errorTroublshootDiv.setAttribute("class", "error-troubleshoot-div");
-    errorTroublshootDiv.innerText = error.troubleshoot;
+    const errorTroublshootTitle = document.createElement("div");
+    errorTroublshootTitle.setAttribute("class", "error-troubleshoot-title");
+    errorTroublshootTitle.innerText = "Troubleshoot:";
+    const errorTroublshootText = document.createElement("div");
+    errorTroublshootText.setAttribute("class", "error-troubleshoot-text");
+    errorTroublshootText.innerText = error.troubleshoot;
+    errorTroublshootDiv.appendChild(errorTroublshootTitle);
+    errorTroublshootDiv.appendChild(errorTroublshootText);
     errorDetailsDiv.appendChild(errorTroublshootDiv);
   });
+
+  const errorEDiv = document.createElement("div");
+  errorEDiv.setAttribute("class", "error-modal-div");
+  const errorETitleDiv = document.createElement("div");
+  errorETitleDiv.setAttribute("class", "error-title-div");
+  errorETitleDiv.innerText = "Category E - System-level Errors";
+  const errorEDetailsDiv = document.createElement("div");
+  errorEDetailsDiv.setAttribute("class", "error-details-div");
+  errorEDiv.appendChild(errorETitleDiv);
+
   errorADiv.appendChild(errorTitleDiv);
   errorADiv.appendChild(errorDetailsDiv);
+
   modalBody.appendChild(errorADiv);
+  modalBody.appendChild(errorEDiv);
 };
 
 const handleShaverInsertInformation = () => {
