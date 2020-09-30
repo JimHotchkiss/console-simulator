@@ -1568,7 +1568,7 @@ const shavers = [
   },
 ];
 
-const errors = [
+const errorsA = [
   {
     error_id: "A1",
     description: "Vessel Seal no vessel detected",
@@ -1649,6 +1649,101 @@ const errors = [
     error_id: "A16",
     description: "MC Board invalid port fault",
     troubleshoot: "Replace Motor Control Board",
+  },
+];
+
+const errorsE = [
+  {
+    error_id: "E1",
+    description: "SFB Connect Error",
+    troubleshoot:
+      "Verify SFB connections. Use a known good cable. Use a known good SFB device (pump/SDC/etc). Replace Motor Control Board",
+  },
+  {
+    error_id: "E2",
+    description: "MC Board FPGA Initialization lockdown",
+    troubleshoot: "Replace Motor Control Board",
+  },
+  {
+    error_id: "E3",
+    description: "MC Board FPGA Programming lockdown",
+    troubleshoot: "Replace Motor Control Board",
+  },
+  {
+    error_id: "E4",
+    description: "MC Board FPGA address test lockdown",
+    troubleshoot: "Replace Motor Control Board",
+  },
+  {
+    error_id: "E5",
+    description: "MC Board FPGA data test lockdown",
+    troubleshoot: "Replace Motor Control Board",
+  },
+];
+
+const errorsP = [
+  {
+    error_id: "P1",
+    description: "Handpiece disposable not recognized",
+    troubleshoot:
+      "Use a known good handpiece/disposable. Verify Receptacle Board connection. Verify Handpiece connection. Replace receptacle board",
+  },
+  {
+    error_id: "P2",
+    description: "Unknown disposable",
+    troubleshoot:
+      "Use a known good handpiece/disposable. Verify Receptacle Board connection. Verify Handpiece connection. Replace receptacle board",
+  },
+  {
+    error_id: "P3",
+    description: "RFID communication Time out",
+    troubleshoot:
+      "Use a known good handpiece/disposable. Verify Receptacle Board connection. Verify Handpiece connection. Replace receptacle board",
+  },
+  {
+    error_id: "P4",
+    description: "Handpiece disposable expired",
+    troubleshoot:
+      "Use a known good handpiece/disposable. Verify Receptacle Board connection. Verify Handpiece connection. Replace receptacle board",
+  },
+  {
+    error_id: "P5",
+    description: "Handpiece disposable not compatible",
+    troubleshoot:
+      "Use a known good handpiece/disposable. Verify Receptacle Board connection. Verify Handpiece connection. Replace receptacle board",
+  },
+];
+
+const errorsW = [
+  {
+    error_id: "W1",
+    description: "Handpiece disposable expired warning",
+    troubleshoot:
+      "Verify the disposable timestamp using another console. Replace receptacle board. Check the real time clock using aserial terminal. Check main board battery voltage. Replace battery or board",
+  },
+  {
+    error_id: "W2",
+    description: "Invalid preference file",
+    troubleshoot:
+      "Use a known good preference file. Use the same preference file on a known good console. Replace front board.Replace MC Board",
+  },
+  {
+    error_id: "W3",
+    description: "Memory allocation error loading preference file",
+    troubleshoot:
+      "Use a known good preference file. Use the same preference file on a known good console. Replace front board.Replace MC Board",
+  },
+  {
+    error_id: "W4",
+    description: "Preference file not found",
+    troubleshoot:
+      "Use a known good preference file. Use the same preference file on a known good console. Replace front board.Replace MC Board",
+  },
+  {
+    error_id: "W5",
+    description: "USB Inserted while console is in use",
+    troubleshoot:
+      "Remove USBdrive. Remove SERFAS probe and shaver. Remove MC board",
   },
 ];
 
