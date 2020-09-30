@@ -678,7 +678,6 @@ label {
 }
 
 .error-title-div {
-  margin-top: 16px;
   font-family: roboto;
   font-size: 25px;
   font-weight: 400;
@@ -721,4 +720,12 @@ label {
 
 .error-troubleshoot-text {
   margin-left: 8px;
+}
+
+#error-e-title-div {
+  margin-top: 28px;
+}
+
+#error-p-title-div {
+  margin-top: 28px;
 }

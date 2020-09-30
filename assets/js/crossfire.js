@@ -1837,8 +1837,8 @@ const showErrorCodes = () => {
   const errorTitleDiv = document.createElement("div");
   errorTitleDiv.setAttribute("class", "error-title-div");
   errorTitleDiv.innerText = "Category A - Activation Errors";
-  const errorDetailsDiv = document.createElement("div");
-  errorDetailsDiv.setAttribute("class", "error-details-div");
+  const errorADetailsDiv = document.createElement("div");
+  errorADetailsDiv.setAttribute("class", "error-details-div");
 
   errorsA.map((error) => {
     const errorIdDiv = document.createElement("div");
@@ -1851,7 +1851,7 @@ const showErrorCodes = () => {
     errorIdText.innerText = error.error_id;
     errorIdDiv.appendChild(errorIdTitle);
     errorIdDiv.appendChild(errorIdText);
-    errorDetailsDiv.appendChild(errorIdDiv);
+    errorADetailsDiv.appendChild(errorIdDiv);
     const errorDescriptionDiv = document.createElement("div");
     errorDescriptionDiv.setAttribute("class", "error-description-div");
     const errorDescriptionTitle = document.createElement("div");
@@ -1863,7 +1863,7 @@ const showErrorCodes = () => {
     errorDescriptionText.innerText = error.description;
     errorDescriptionDiv.appendChild(errorDescriptionTitle);
     errorDescriptionDiv.appendChild(errorDescriptionText);
-    errorDetailsDiv.appendChild(errorDescriptionDiv);
+    errorADetailsDiv.appendChild(errorDescriptionDiv);
     const errorTroublshootDiv = document.createElement("div");
     errorTroublshootDiv.setAttribute("class", "error-troubleshoot-div");
     const errorTroublshootTitle = document.createElement("div");
@@ -1874,23 +1874,159 @@ const showErrorCodes = () => {
     errorTroublshootText.innerText = error.troubleshoot;
     errorTroublshootDiv.appendChild(errorTroublshootTitle);
     errorTroublshootDiv.appendChild(errorTroublshootText);
-    errorDetailsDiv.appendChild(errorTroublshootDiv);
+    errorADetailsDiv.appendChild(errorTroublshootDiv);
   });
-
   const errorEDiv = document.createElement("div");
   errorEDiv.setAttribute("class", "error-modal-div");
   const errorETitleDiv = document.createElement("div");
   errorETitleDiv.setAttribute("class", "error-title-div");
+  errorETitleDiv.setAttribute("id", "error-e-title-div");
   errorETitleDiv.innerText = "Category E - System-level Errors";
   const errorEDetailsDiv = document.createElement("div");
   errorEDetailsDiv.setAttribute("class", "error-details-div");
+  errorsE.map((error) => {
+    const errorIdDiv = document.createElement("div");
+    errorIdDiv.setAttribute("class", "error-id-div");
+    const errorIdTitle = document.createElement("div");
+    errorIdTitle.setAttribute("class", "error-id-title");
+    errorIdTitle.innerText = "Error id:";
+    const errorIdText = document.createElement("div");
+    errorIdText.setAttribute("class", "error-id-text");
+    errorIdText.innerText = error.error_id;
+    errorIdDiv.appendChild(errorIdTitle);
+    errorIdDiv.appendChild(errorIdText);
+    errorEDetailsDiv.appendChild(errorIdDiv);
+    const errorDescriptionDiv = document.createElement("div");
+    errorDescriptionDiv.setAttribute("class", "error-description-div");
+    const errorDescriptionTitle = document.createElement("div");
+    errorDescriptionTitle.setAttribute("class", "error-description-title");
+    errorDescriptionTitle.innerText = "Description:";
+    const errorDescriptionText = document.createElement("div");
+    errorDescriptionText.setAttribute("class", "error-description-text");
+    errorDescriptionTitle.innerText = "Description:";
+    errorDescriptionText.innerText = error.description;
+    errorDescriptionDiv.appendChild(errorDescriptionTitle);
+    errorDescriptionDiv.appendChild(errorDescriptionText);
+    errorEDetailsDiv.appendChild(errorDescriptionDiv);
+    const errorTroublshootDiv = document.createElement("div");
+    errorTroublshootDiv.setAttribute("class", "error-troubleshoot-div");
+    const errorTroublshootTitle = document.createElement("div");
+    errorTroublshootTitle.setAttribute("class", "error-troubleshoot-title");
+    errorTroublshootTitle.innerText = "Troubleshoot:";
+    const errorTroublshootText = document.createElement("div");
+    errorTroublshootText.setAttribute("class", "error-troubleshoot-text");
+    errorTroublshootText.innerText = error.troubleshoot;
+    errorTroublshootDiv.appendChild(errorTroublshootTitle);
+    errorTroublshootDiv.appendChild(errorTroublshootText);
+    errorEDetailsDiv.appendChild(errorTroublshootDiv);
+  });
+
+  const errorPDiv = document.createElement("div");
+  errorPDiv.setAttribute("class", "error-modal-div");
+  const errorPTitleDiv = document.createElement("div");
+  errorPTitleDiv.setAttribute("class", "error-title-div");
+  errorPTitleDiv.setAttribute("id", "error-p-title-div");
+  errorPTitleDiv.innerText = "Category P - Probe Errors";
+  const errorPDetailsDiv = document.createElement("div");
+  errorPDetailsDiv.setAttribute("class", "error-details-div");
+  errorsP.map((error) => {
+    const errorIdDiv = document.createElement("div");
+    errorIdDiv.setAttribute("class", "error-id-div");
+    const errorIdTitle = document.createElement("div");
+    errorIdTitle.setAttribute("class", "error-id-title");
+    errorIdTitle.innerText = "Error id:";
+    const errorIdText = document.createElement("div");
+    errorIdText.setAttribute("class", "error-id-text");
+    errorIdText.innerText = error.error_id;
+    errorIdDiv.appendChild(errorIdTitle);
+    errorIdDiv.appendChild(errorIdText);
+    errorPDetailsDiv.appendChild(errorIdDiv);
+    const errorDescriptionDiv = document.createElement("div");
+    errorDescriptionDiv.setAttribute("class", "error-description-div");
+    const errorDescriptionTitle = document.createElement("div");
+    errorDescriptionTitle.setAttribute("class", "error-description-title");
+    errorDescriptionTitle.innerText = "Description:";
+    const errorDescriptionText = document.createElement("div");
+    errorDescriptionText.setAttribute("class", "error-description-text");
+    errorDescriptionTitle.innerText = "Description:";
+    errorDescriptionText.innerText = error.description;
+    errorDescriptionDiv.appendChild(errorDescriptionTitle);
+    errorDescriptionDiv.appendChild(errorDescriptionText);
+    errorPDetailsDiv.appendChild(errorDescriptionDiv);
+    const errorTroublshootDiv = document.createElement("div");
+    errorTroublshootDiv.setAttribute("class", "error-troubleshoot-div");
+    const errorTroublshootTitle = document.createElement("div");
+    errorTroublshootTitle.setAttribute("class", "error-troubleshoot-title");
+    errorTroublshootTitle.innerText = "Troubleshoot:";
+    const errorTroublshootText = document.createElement("div");
+    errorTroublshootText.setAttribute("class", "error-troubleshoot-text");
+    errorTroublshootText.innerText = error.troubleshoot;
+    errorTroublshootDiv.appendChild(errorTroublshootTitle);
+    errorTroublshootDiv.appendChild(errorTroublshootText);
+    errorPDetailsDiv.appendChild(errorTroublshootDiv);
+  });
+
+  const errorWDiv = document.createElement("div");
+  errorWDiv.setAttribute("class", "error-modal-div");
+  const errorWTitleDiv = document.createElement("div");
+  errorWTitleDiv.setAttribute("class", "error-title-div");
+  errorWTitleDiv.setAttribute("id", "error-p-title-div");
+  errorWTitleDiv.innerText = "Category W - Warning Errors";
+  const errorWDetailsDiv = document.createElement("div");
+  errorWDetailsDiv.setAttribute("class", "error-details-div");
+  errorsW.map((error) => {
+    const errorIdDiv = document.createElement("div");
+    errorIdDiv.setAttribute("class", "error-id-div");
+    const errorIdTitle = document.createElement("div");
+    errorIdTitle.setAttribute("class", "error-id-title");
+    errorIdTitle.innerText = "Error id:";
+    const errorIdText = document.createElement("div");
+    errorIdText.setAttribute("class", "error-id-text");
+    errorIdText.innerText = error.error_id;
+    errorIdDiv.appendChild(errorIdTitle);
+    errorIdDiv.appendChild(errorIdText);
+    errorWDetailsDiv.appendChild(errorIdDiv);
+    const errorDescriptionDiv = document.createElement("div");
+    errorDescriptionDiv.setAttribute("class", "error-description-div");
+    const errorDescriptionTitle = document.createElement("div");
+    errorDescriptionTitle.setAttribute("class", "error-description-title");
+    errorDescriptionTitle.innerText = "Description:";
+    const errorDescriptionText = document.createElement("div");
+    errorDescriptionText.setAttribute("class", "error-description-text");
+    errorDescriptionTitle.innerText = "Description:";
+    errorDescriptionText.innerText = error.description;
+    errorDescriptionDiv.appendChild(errorDescriptionTitle);
+    errorDescriptionDiv.appendChild(errorDescriptionText);
+    errorWDetailsDiv.appendChild(errorDescriptionDiv);
+    const errorTroublshootDiv = document.createElement("div");
+    errorTroublshootDiv.setAttribute("class", "error-troubleshoot-div");
+    const errorTroublshootTitle = document.createElement("div");
+    errorTroublshootTitle.setAttribute("class", "error-troubleshoot-title");
+    errorTroublshootTitle.innerText = "Troubleshoot:";
+    const errorTroublshootText = document.createElement("div");
+    errorTroublshootText.setAttribute("class", "error-troubleshoot-text");
+    errorTroublshootText.innerText = error.troubleshoot;
+    errorTroublshootDiv.appendChild(errorTroublshootTitle);
+    errorTroublshootDiv.appendChild(errorTroublshootText);
+    errorWDetailsDiv.appendChild(errorTroublshootDiv);
+  });
+
+  errorWDiv.appendChild(errorWTitleDiv);
+  errorWDiv.appendChild(errorWDetailsDiv);
+
+  errorPDiv.appendChild(errorPTitleDiv);
+  errorPDiv.appendChild(errorPDetailsDiv);
+
   errorEDiv.appendChild(errorETitleDiv);
+  errorEDiv.appendChild(errorEDetailsDiv);
 
   errorADiv.appendChild(errorTitleDiv);
-  errorADiv.appendChild(errorDetailsDiv);
+  errorADiv.appendChild(errorADetailsDiv);
 
   modalBody.appendChild(errorADiv);
   modalBody.appendChild(errorEDiv);
+  modalBody.appendChild(errorPDiv);
+  modalBody.appendChild(errorWDiv);
 };
 
 const handleShaverInsertInformation = () => {
