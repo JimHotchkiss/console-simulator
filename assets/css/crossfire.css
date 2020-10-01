@@ -146,17 +146,17 @@
 }
 
 .serfas-readout-div {
-  width: 211px;
+  width: 221px;
   height: 185px;
   margin-top: 6px;
-  margin-left: 15px;
+  margin-left: 6px;
   padding-top: 8px;
   border-radius: 8px;
   background: #fff;
 }
 
 .right-serfas-readout-div {
-  width: 211px;
+  width: 221px;
   height: 185px;
   margin-top: 6px;
   margin-left: 8px;
@@ -198,7 +198,7 @@
 }
 
 .shaver-readout-div {
-  width: 441px;
+  width: 450px;
   height: 185px;
   margin-top: 6px;
   margin-left: 4px;
@@ -210,10 +210,10 @@
 }
 
 .left-shaver-readout-div {
-  width: 441px;
+  width: 451px;
   height: 185px;
   margin-top: 6px;
-  margin-left: 16px;
+  margin-left: 6px;
   padding-top: 1px;
   padding-left: 5px;
   border-radius: 8px;
@@ -222,7 +222,7 @@
 }
 
 .serfas-text-div {
-  width: 190px;
+  width: 206px;
   height: 124px;
   margin: auto;
   border-radius: 8px;
@@ -231,10 +231,10 @@
 
 .shaver-lcd-div {
   display: flex;
-  width: 420px;
+  width: 436px;
   height: 124px;
   margin-top: 6px;
-  margin-left: 4px;
+  margin-left: 2px;
   border-radius: 8px;
   background: #18478e;
 }
