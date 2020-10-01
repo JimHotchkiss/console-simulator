@@ -562,7 +562,7 @@
   cursor: pointer;
   width: 200px;
   height: 70px;
-  margin: 5px auto;
+  margin: 2px auto;
   background: transparent url("/assets/img/rfwand.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
@@ -671,6 +671,10 @@
   background-color: #18478e;
 }
 
+.shaver-select {
+  margin-top: 4px;
+}
+
 /* Style the arrow inside the select element: */
 .select-selected:after {
   position: absolute;
@@ -773,6 +777,13 @@ select:focus + .focus {
   color: #01225d;
 }
 
+#serfas-select {
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 300;
+  color: #01225d;
+}
+
 label {
   font-family: roboto;
   font-size: 18px;
@@ -860,19 +871,35 @@ label {
 .cutpower-hc-div {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: 100%;
+  margin-left: auto;
 }
 
+.hc-coag-power-div {
+  display: flex;
+}
+
+.coag-power-div {
+  display: none;
+}
+
+.coag-power-div.coag-power-show {
+  display: block;
+  font-size: 30px;
+  font-family: roboto;
+  letter-spacing: 4px;
+  font-weight: 900;
+  color: #fff;
+  margin-right: 12px;
+}
 .serfas-power-div {
-  height: 80%;
   font-size: 80px;
   font-family: roboto;
   font-weight: 700;
-  color: #fff;
   text-align: right;
-  padding-top: 12px;
-  background: transparent;
+  color: #fff;
+  margin-top: 12px;
+  padding-right: 8px;
+  height: 80px;
 }
 
 .serfas-hc-div {
@@ -880,18 +907,62 @@ label {
   font-family: roboto;
   font-weight: 600;
   color: #fff;
-  text-align: right;
+  margin-top: 6px;
   padding-right: 12px;
-  margin-bottom: 12px;
 }
 
 .mode-fs-force-div {
   width: 50%;
   height: 100%;
-  background: yellow;
 }
 
-.mode-fs-force-div {
+.mode-fp-force-div {
   display: flex;
   flex-direction: column;
+}
+
+.serfas-fp-div {
+  font-size: 28px;
+  font-family: roboto;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 12px;
+  margin-top: 4px;
+  height: auto;
+  width: auto;
+}
+
+.mode-div {
+  font-size: 18px;
+  font-family: roboto;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 12px;
+  margin-top: 4px;
+  height: auto;
+  width: auto;
+}
+
+/* .force-mod-div {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: transparent url("/assets/img/force-mod.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  margin-left: 4px;
+  margin-top: 6px;
+  background-size: 40px;
+} */
+
+.force-mod-div.force-mod-show {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: transparent url("/assets/img/force-mod.png") 0% 0% no-repeat
+    padding-box;
+  opacity: 1;
+  margin-left: 4px;
+  margin-top: 6px;
+  background-size: 40px;
 }

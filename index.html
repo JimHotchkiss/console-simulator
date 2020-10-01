@@ -392,17 +392,31 @@
                     <div id="serfas-container" class="serfas-container">
                       <div class="serfas-readout-div">
                         <div class="serfas-text-div">
-                          <div class="mode-fs-force-div">
-                            <div class="mode-div"></div>
-                            <div class="serfas-fs-div"></div>
-                            <div class="force-mod-div"></div>
+                          <div class="mode-fp-force-div">
+                            <div id="serfas-fp-div" class="serfas-fp-div"></div>
+                            <div id="mode-div" class="mode-div"></div>
+                            <div id="force-mod-div" class="force-mod-div"></div>
                           </div>
                           <div class="cutpower-hc-div">
-                            <div class="serfas-power-div">11</div>
-                            <div class="serfas-hc-div">HC</div>
+                            <div
+                              id="serfas-power-div"
+                              class="serfas-power-div"
+                            ></div>
+                            <div class="hc-coag-power-div">
+                              <div id="coag-power-div" class="coag-power-div">
+                                &middot; &middot; &middot;
+                              </div>
+                              <div
+                                id="serfas-hc-div"
+                                class="serfas-hc-div"
+                              ></div>
+                            </div>
                           </div>
                         </div>
-                        <h3 class="serfas-readout-title"></h3>
+                        <h3
+                          id="serfas-readout-title"
+                          class="serfas-readout-title"
+                        ></h3>
                       </div>
                     </div>
                     <div id="shaver-container" class="shaver-container">
@@ -474,7 +488,16 @@
                 </div>
               </div>
             </div>
-            <div class="rf-div"><div id="rf-img" class="rf-img"></div></div>
+            <div class="rf-div">
+              <div id="rf-img" class="rf-img"></div>
+              <div class="serfas-select">
+                <label for="standard-select">Serfas Probe</label>
+                <div class="select">
+                  <select id="serfas-select"></select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- End Crossfire Simulator-->

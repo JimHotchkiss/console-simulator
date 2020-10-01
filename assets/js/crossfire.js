@@ -1,7 +1,9 @@
 window.addEventListener("load", (event) => {
   handleFootPedal();
   handleShaveInsertSelect();
+  handleSerfasProbeSelect();
   loadShaverInserts();
+  loadSerfasProbes();
   handleShaverInsertInformation();
   handleErrorCodesListener();
   handleHandpieceToggleListener();
@@ -1569,6 +1571,42 @@ const shavers = [
   },
 ];
 
+const probes = [
+  {
+    name: "Select Serfas Probe",
+    pn: "number",
+    cut_max: "number",
+    cut_default: "number",
+  },
+  { name: "90-S Cruise", pn: "0279401200", cut_max: "11", cut_default: "9" },
+  {
+    name: "90-S Accelerator",
+    pn: "0279351400",
+    cut_max: "11",
+    cut_default: "9",
+  },
+  { name: "90-S Max", pn: "0279401100", cut_max: "11", cut_default: "9" },
+  { name: "90-S", pn: "0279351100", cut_max: "11", cut_default: "9" },
+  {
+    name: "Aardvark",
+    pn: "0279251101",
+    cut_max: "6",
+    cut_default: "4",
+  },
+  {
+    name: "50-S Sweep",
+    pn: "0279351650",
+    cut_max: "9",
+    cut_default: "7",
+  },
+  { name: "50-S (Angled)", pn: "0279351250", cut_max: "11", cut_default: "9" },
+  { name: "30-S (Angled)", pn: "0279351230", cut_max: "11", cut_default: "9" },
+  { name: "Direct", pn: "0279350401", cut_max: "6", cut_default: "5" },
+  { name: "Lateral", pn: "0279350201", cut_max: "8", cut_default: "5" },
+  { name: "Contour", pn: "0279350301", cut_max: "7", cut_default: "5" },
+  { name: "Hook", pn: "0279350501", cut_max: "7", cut_default: "5" },
+];
+
 const errorsA = [
   {
     error_id: "A1",
@@ -1759,6 +1797,17 @@ const loadShaverInserts = () => {
   }
 };
 
+const loadSerfasProbes = () => {
+  const serfasSelect = document.getElementById("serfas-select");
+  for (let probe of probes) {
+    const optionDiv = document.createElement("option");
+    optionDiv.setAttribute("class", "probe-select");
+    optionDiv.setAttribute("value", probe.name);
+    optionDiv.innerText = probe.name;
+    serfasSelect.appendChild(optionDiv);
+  }
+};
+
 const handleFootPedal = () => {
   const footPedal = document.getElementById("ftswitch-div");
   footPedal.addEventListener("click", () => {
@@ -1787,6 +1836,36 @@ const handleShaveInsertSelect = () => {
     selectedShaver = elementSelected.currentTarget.value;
     updateShaverTitle(selectedShaver);
   });
+};
+
+const handleSerfasProbeSelect = () => {
+  const serfasSelect = document.querySelector("#serfas-select");
+  serfasSelect.addEventListener("change", (elementSelected) => {
+    selectedProbe = elementSelected.currentTarget.value;
+    updateSerfasProbeDisplay(selectedProbe);
+  });
+};
+
+const updateSerfasProbeDisplay = (selectedProbe) => {
+  const surfasPowerDiv = document.getElementById("serfas-power-div");
+  const coagPowerDiv = document.getElementById("coag-power-div");
+  console.log(coagPowerDiv);
+  const serfasHcDiv = document.getElementById("serfas-hc-div");
+  const serfasFpDiv = document.getElementById("serfas-fp-div");
+  const modeDiv = document.getElementById("mode-div");
+  const forceModDiv = document.getElementById("force-mod-div");
+  const serfasReadoutTitle = document.getElementById("serfas-readout-title");
+  probes.map((probe) => {
+    if (selectedProbe === probe.name) {
+      surfasPowerDiv.innerText = probe.cut_default;
+    }
+  });
+  serfasHcDiv.innerText = "HC";
+  serfasFpDiv.innerText = "FP";
+  modeDiv.innerText = "COAG";
+  serfasReadoutTitle.innerText = "SERFAS";
+  forceModDiv.classList.add("force-mod-show");
+  coagPowerDiv.classList.add("coag-power-show");
 };
 
 const updateShaverTitle = (selectedShaver) => {
