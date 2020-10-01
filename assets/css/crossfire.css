@@ -223,6 +223,7 @@
 }
 
 .serfas-text-div {
+  display: flex;
   width: 206px;
   height: 124px;
   margin: auto;
@@ -561,7 +562,7 @@
   cursor: pointer;
   width: 200px;
   height: 70px;
-  margin: 40px auto;
+  margin: 5px auto;
   background: transparent url("/assets/img/rfwand.png") 0% 0% no-repeat
     padding-box;
   opacity: 1;
@@ -854,4 +855,43 @@ label {
 
 #error-p-title-div {
   margin-top: 28px;
+}
+
+.cutpower-hc-div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+
+.serfas-power-div {
+  height: 80%;
+  font-size: 80px;
+  font-family: roboto;
+  font-weight: 700;
+  color: #fff;
+  text-align: right;
+  padding-top: 12px;
+  background: transparent;
+}
+
+.serfas-hc-div {
+  font-size: 18px;
+  font-family: roboto;
+  font-weight: 600;
+  color: #fff;
+  text-align: right;
+  padding-right: 12px;
+  margin-bottom: 12px;
+}
+
+.mode-fs-force-div {
+  width: 50%;
+  height: 100%;
+  background: yellow;
+}
+
+.mode-fs-force-div {
+  display: flex;
+  flex-direction: column;
 }
