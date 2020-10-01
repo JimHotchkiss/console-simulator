@@ -1791,29 +1791,43 @@ const handleShaveInsertSelect = () => {
 
 const updateShaverTitle = (selectedShaver) => {
   const shaverTitle = document.getElementById("shaver-readout-title");
+  const leftShaverTitle = document.getElementById("left-shaver-readout-title");
   shaverTitle.innerText = selectedShaver;
+  leftShaverTitle.innerText = selectedShaver;
   updateShaverRpm(selectedShaver);
 };
 
 const updateShaverRpm = (selectedShaver) => {
   const hcDiv = document.getElementById("hc-div");
+  const leftHcDiv = document.getElementById("left-hc-div");
+
   const ftPedalDiv = document.getElementById("footpedal-div");
+  const leftFtPedalDiv = document.getElementById("left-footpedal-div");
   const directionImgDiv = document.getElementById("direction-img-div");
+  const leftDirectionImgDiv = document.getElementById("left-direction-img-div");
   const controlOptDiv = document.getElementById("control-option-div");
+  const leftControlOptDiv = document.getElementById("left-control-option-div");
   const directionDiv = document.getElementById("direction-div");
+  const leftDirectionDiv = document.getElementById("left-direction-div");
 
   for (let shaver of shavers) {
     if (shaver.name === selectedShaver) {
-      console.log(shaver.name, selectedShaver);
       const rpmDiv = document.getElementById("rpm-div");
+      const leftRpmDiv = document.getElementById("left-rpm-div");
       rpmDiv.innerText = shaver.fwd_low_default;
+      leftRpmDiv.innerText = shaver.fwd_low_default;
     }
   }
   hcDiv.innerText = "HC";
+  leftHcDiv.innerText = "HC";
   ftPedalDiv.innerText = "FP";
+  leftFtPedalDiv.innerText = "FP";
   controlOptDiv.innerText = "VAR";
   directionDiv.innerText = "F";
+  leftDirectionDiv.innerText = "F";
+  leftControlOptDiv.innerText = "VAR";
   directionImgDiv.classList.add("show-img");
+  leftDirectionImgDiv.classList.add("show-img");
 };
 
 const handleErrorCodesListener = () => {
