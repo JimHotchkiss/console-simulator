@@ -1862,7 +1862,7 @@ const updateSerfasProbeDisplay = (selectedProbe) => {
   });
   serfasHcDiv.innerText = "HC";
   serfasFpDiv.innerText = "FP";
-  modeDiv.innerText = "COAG";
+  modeDiv.innerText = "CUT";
   serfasReadoutTitle.innerText = "SERFAS";
   forceModDiv.classList.add("force-mod-show");
   coagPowerDiv.classList.add("coag-power-show");
