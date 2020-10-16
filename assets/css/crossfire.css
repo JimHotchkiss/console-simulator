@@ -16,7 +16,7 @@
 .crossfire-container.show-console {
   display: flex;
   flex-direction: column;
-  width: 1175px;
+  /* width: 1175px; */
   height: 630px;
   margin: 50px auto;
 }
@@ -27,7 +27,7 @@
 
 .console-container {
   display: flex;
-  width: 1000px;
+  /* width: 1000px; */
   height: 475px;
   margin: auto;
   margin-bottom: 24px;
@@ -104,7 +104,6 @@
 }
 
 .first-border-display-screen {
-  width: 741px;
   height: 245px;
   padding-top: 20px;
   padding-left: 21px;
@@ -550,7 +549,7 @@
 
 .ftswitch-img {
   cursor: pointer;
-  width: 1750px;
+  width: 170px;
   height: 150px;
   /* margin: auto; */
   background: transparent url("/assets/img/footpedal.png") 0% 0% no-repeat
