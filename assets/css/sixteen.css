@@ -74,6 +74,10 @@ html {
   width: 700px;
 }
 
+.specialty:hover {
+  cursor: pointer;
+}
+
 #right-arrow {
   cursor: pointer;
   width: 100px;
@@ -623,6 +627,10 @@ html {
   font-size: 18px;
   font-weight: 200;
   padding: 10px 15px;
+  color: #fff;
+}
+
+.spy-li {
   color: #fff;
 }
 

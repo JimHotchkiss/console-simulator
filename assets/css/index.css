@@ -77,6 +77,10 @@ html {
   border-radius: 50%;
 }
 
+.round-img-div:hover {
+  cursor: pointer;
+}
+
 .home-img-div {
   width: 24px;
   height: 24px;
