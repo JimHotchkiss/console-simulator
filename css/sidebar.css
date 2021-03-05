@@ -1,0 +1,24 @@
+.sidebar {
+    width: 52px;
+    height: 692px;
+    padding-top: 15px;
+    padding-left: 8px;
+    background: #414141;
+}
+
+.home-div {
+    width: 27px;
+    height: 27px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #2b72cc;
+    border-radius: 50%;
+}
+
+.home-img-div {
+    width: 24px;
+    height: 24px;
+    background: transparent url("../images/home-icon.svg") 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: 18px;
+}
