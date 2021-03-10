@@ -26,4 +26,5 @@
     [X] Sidebar
         (x) Home icon                      
     [] Navbar 
+        () Console Button
     

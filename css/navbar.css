@@ -2,5 +2,25 @@
     width: 180px;
     height: 707px;
     background: #f7f7f7;
+}
 
+.console-btn {
+    font-family: roboto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10vh;
+    text-align: center;
+    background: #2b72cc;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.console-btn:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    background: #414141;
 }
