@@ -25,6 +25,20 @@
         () Title 
     [X] Sidebar
         (x) Home icon                      
-    [] Navbar 
-        () Console Button
+    [X] Navbar 
+        (x) Console Button
+# 3/10/2021 
+    [] Header
+        (x) Stryker logo
+        () Title 
+
+    [] HUB - Home screen 
+        (x) Render gui div
+        () Patient and Profile row
+        () Start row
+            () Start icon div 
+        () Footer
+            () Image divs 
+            () Menu div
+
     
