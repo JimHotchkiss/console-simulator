@@ -120,7 +120,6 @@ const loadModalBodyText = (modalSubject) => {
         toggleSpyBtn()
         modalTitle.innerText = obj.title
         obj.body.map((item, i) => {
-          console.log(i)
           const ul = document.createElement("ul")
           const li = document.createElement("li")
           li.setAttribute("class", "spy-li")
@@ -137,7 +136,7 @@ const loadModalBodyText = (modalSubject) => {
 }
 
 const toggleSpyBtn = () => {
-  console.log("spy btn")
+  // console.log("spy btn")
 }
 const closeModalListener = () => {
   const modalCloseBtn = document.getElementById("modal-close")
@@ -242,9 +241,10 @@ const hideHomeScreen = () => {
 // Carousel
 
 let slideIndex = 1
-showSlides(slideIndex)
+// showSlides(slideIndex)
 
 function plusSlides(n) {
+  console.log(slideIndex)
   showSlides((slideIndex += n))
 }
 
@@ -253,9 +253,12 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+  // console.log(n)
   let i
   let slides = document.getElementsByClassName("specialty-slides")
+  // console.log(slides)
   let dots = document.getElementsByClassName("dot")
+  console.log(dots)
   const defaultSpecialty = document.getElementById("specialty-default")
   if (defaultSpecialty !== null) {
     defaultSpecialty.style.display = "none"
